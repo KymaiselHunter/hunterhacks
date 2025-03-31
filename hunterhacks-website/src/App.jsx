@@ -1,12 +1,21 @@
-// import { useState } from 'react'
+import { useRef } from 'react'
 
 import Navbar from './components/Navbar'
 import Section from './components/Section'
-// import './Background.css'
-
 
 function App() {
   // const [count, setCount] = useState(0)
+  const aboutRef = useRef(null);
+  const sponsorRef = useRef(null);
+  const judgeRef = useRef(null);
+  const scheduleRef = useRef(null);
+  const trackRef = useRef(null);
+  const applicationRef = useRef(null);
+  const faqRef = useRef(null);
+
+  const scrollToRef = (ref) => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
 
   return (
     <div
@@ -17,17 +26,23 @@ function App() {
 
       className='All'
     >
-      <Navbar></Navbar>
-      {/* <div id="star-container">
-        <div id="stars"></div>
+      <Navbar
+        aboutRef={aboutRef}
+        sponsorRef={sponsorRef}
+        judgeRef={judgeRef}
+        scheduleRef={scheduleRef}
+        trackRef={trackRef}
+        applicationRef={applicationRef}
+        faqRef={faqRef}
+        scrollFunction={scrollToRef}
+      ></Navbar>
 
-      </div> */} 
       <main>
         <h1>HunterHacks</h1>
         
         <Section
           title="About this Hackathon:"
-          id="about"
+          ref={aboutRef}
         >
           <p>
             HunterHacks is Hunter College’s premier student-led hackathon, dedicated to empowering students to use technology for social wellness and community impact. We believe that innovation thrives when diverse minds come together to solve real-world problems, and at HunterHacks, we’re here to make that happen—one hack at a time.
@@ -39,7 +54,7 @@ function App() {
         </Section>
         <Section
           title="Sponsors + Images:"
-          id="sponsors"
+          ref={sponsorRef}
         >
           <p>
           Logo
@@ -57,7 +72,7 @@ function App() {
 
       <Section
         title="Judges + Images:"
-        id="judges"
+        ref={judgeRef}
         >
 
       <p>
@@ -71,20 +86,20 @@ function App() {
 
       <Section
         title="Hackathon Schedule:"
-        id="schedule"
+        ref={scheduleRef}
         >
       </Section>
       
       <Section
         title="Tracks (no prizes until actual hackathon):"
-        id="tracks"
+        ref={trackRef}
         >
       </Section>
                 
       
       <Section
         title="Link to Hackathon Application:"
-        id="application"
+        ref={applicationRef}
       >
       </Section>
 
@@ -92,7 +107,7 @@ function App() {
 
       <Section 
         title="Frequently Asked Questions"
-        id="faq"
+        ref={faqRef}
       >
       <ul>
           <li>What is HunterHacks?</li>

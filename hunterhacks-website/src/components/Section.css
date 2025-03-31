@@ -6,6 +6,11 @@
     transition: all 1500ms;
 
     z-index: 0;
+
+
+    scroll-margin-top: 6rem;
+
+    
 }
 
 .section-reveal {

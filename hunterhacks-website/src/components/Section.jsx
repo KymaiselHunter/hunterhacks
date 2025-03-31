@@ -1,10 +1,9 @@
 import {useEffect, useRef} from 'react'
 import './Section.css'
 
-function Section({title, id, children})
+function Section({title, ref, children})
 {
-    const elementRef = useRef(null)
-
+    const elementRef = ref
     
     
         useEffect(()=>{
@@ -17,7 +16,7 @@ function Section({title, id, children})
 
             const observer = new IntersectionObserver((entries) =>{
                 entries.forEach((entry) => {
-                  console.log(entry)
+                  // console.log(entry)
                   if(entry.isIntersecting){
                     entry.target.classList.add('section-reveal');
                   }
@@ -35,12 +34,12 @@ function Section({title, id, children})
         },[]);
 
     return(
-        <div ref={elementRef} className="section" id={`section-${id}`}>
+        <div ref={elementRef} className="section">
             <h2>
                 {title}
             </h2>
 
-            <div id={`content-${id}`}>
+            <div>
                 {children}
             </div>
         </div>
