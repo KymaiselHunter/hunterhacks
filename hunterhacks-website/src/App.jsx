@@ -2,6 +2,7 @@ import { useRef } from 'react'
 
 import Navbar from './components/Navbar'
 import Section from './components/Section'
+import Logo from './components/Logo'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -38,6 +39,7 @@ function App() {
       ></Navbar>
 
       <main>
+        <Logo></Logo>
         <h1>HunterHacks</h1>
         
         <Section
