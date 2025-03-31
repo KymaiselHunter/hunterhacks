@@ -10,11 +10,13 @@
 
 
     /* Navbar styling */
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(17, 12, 41, .75);
+    /* background: transparent; */
+    /* background-color: rgb(17, 12, 41); */
     backdrop-filter: blur(10px);               /* blur background */
     -webkit-backdrop-filter: blur(10px);       /* for Safari */
 
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   
     /* content within navbar styling */
     display: flex;

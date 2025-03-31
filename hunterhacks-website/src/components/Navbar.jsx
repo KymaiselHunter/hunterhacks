@@ -4,7 +4,7 @@ function Navbar()
 {
     return(
         <div id="Navbar">
-            test
+            HunterHacks
         </div>
     );
 }export default Navbar

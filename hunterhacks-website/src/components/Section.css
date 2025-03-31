@@ -1,0 +1,23 @@
+.section {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-15%); /* Optional: Add small movement */
+    /* transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out; */
+    transition: all 1500ms;
+
+    z-index: 0;
+}
+
+.section-reveal {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section,
+    .section-reveal {
+      transition: none;
+      transform: none;
+    }
+  }
