@@ -1,0 +1,150 @@
+#date-text,
+#workshop-text,
+#hybrid-text,
+#prize-text,
+#catering-text{
+    opacity: 0;
+}
+
+#prize{
+    animation: movePrize 2000ms forwards;
+}
+#prize-text
+{
+    animation: appear 200ms ease forwards;
+    animation-delay: 2000ms;
+}
+
+@keyframes movePrize
+{
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(0px, 220px);
+    }
+}
+
+#hybrid{
+    animation: moveHybrid 2000ms forwards;
+}
+#hybrid-text
+{
+    animation: appear 200ms ease forwards;
+    animation-delay: 2000ms;
+}
+
+@keyframes moveHybrid
+{
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(0px, 290px);
+    }
+}
+
+
+
+
+#date{
+    animation: moveDate 2000ms forwards;
+}
+#date-text
+{
+    animation: appear 200ms ease forwards;
+    animation-delay: 2000ms;
+}
+
+@keyframes moveDate
+{
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(0px, 320px);
+    }
+}
+
+#workshop{
+    animation: moveWorkshop_1 800ms forwards,
+    moveWorkshop_2 800ms forwards;
+
+    animation-delay: 0ms,
+    800ms;
+}
+#workshop-text
+{
+    animation: appear 200ms ease forwards;
+    animation-delay: 2000ms;
+}
+
+@keyframes moveWorkshop_1
+{
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(-110px, 0px);
+    }
+}
+@keyframes moveWorkshop_2
+{
+    from{
+        transform: translate(-110px, 0px);
+    }
+    to{
+        transform: translate(-111px, 180px);
+    }
+}
+
+
+#catering{
+    animation: moveCatering_1 1100ms forwards,
+    moveCatering_2 1000ms forwards;
+
+    animation-delay: 0ms,
+    1100ms;
+}
+#catering-text
+{
+    animation: appear 200ms ease forwards;
+    animation-delay: 2000ms;
+}
+
+@keyframes moveCatering_1
+{
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(-240px, 0px);
+    }
+}
+@keyframes moveCatering_2
+{
+    from{
+        transform: translate(-240px, 0px);
+    }
+    to{
+        transform: translate(-240px, 150px);
+    }
+}
+
+
+
+
+
+
+
+
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translate(-20px,0px);
+    }
+    to{
+        opacity: 1;
+    }
+}
