@@ -39,10 +39,20 @@ function Navbar({
                     {
                         sectionArray.map((section, index) => (
                             <a 
+                                className="navbar-item"
                                 key={index}
                                 onClick={() => scrollFunction(section.sectionRef)}
                             >
-                                {section.sectionName}
+                                <p style={{padding:"0rem .5rem"}}>
+                                    {section.sectionName}
+                                </p>
+                                <div>
+                                    <svg viewBox="0 0 12 12" width="11" height="11">
+                                    <circle cx="6" cy="6" r="6" fill="black" />
+                                    </svg>
+                                </div>
+
+
                             </a>
                         ))
                     }
