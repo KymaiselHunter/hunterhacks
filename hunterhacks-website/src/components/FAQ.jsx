@@ -26,7 +26,9 @@ function FAQ(
         <div ref={faqRef} className="faq-wrapper">
             <div onClick={()=>toggleAnswer()} className='question-container'>
                 <h3>{question || "caaa"}</h3>
-                <img className="question-icon"src={PlusIcon} alt="+"></img>
+                <img className="question-icon"src={PlusIcon} 
+                alt="+" draggable="false"
+                ></img>
             </div>
 
             <div 

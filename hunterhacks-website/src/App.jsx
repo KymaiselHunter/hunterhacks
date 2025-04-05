@@ -15,9 +15,24 @@ function App() {
   const faqRef = useRef(null);
 
   const scrollToRef = (ref) => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
+	const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+	ref.current?.scrollIntoView({
+	  behavior: prefersReducedMotion ? 'auto' : 'smooth',
+	});
   };
+  
 
+  const sectionArray = useRef([
+	{ sectionName: 'About', sectionRef: aboutRef },
+	{ sectionName: 'Sponsors', sectionRef: sponsorRef },
+	{ sectionName: 'Judges', sectionRef: judgeRef },
+	{ sectionName: 'Schedule', sectionRef: scheduleRef },
+	{ sectionName: 'Tracks', sectionRef: trackRef },
+	{ sectionName: 'Apply!', sectionRef: applicationRef },
+	{ sectionName: 'FAQ', sectionRef: faqRef },
+  ]);
+  
   return (
     <div
       style={{
@@ -31,13 +46,7 @@ function App() {
       className='All'
     >
       <Navbar
-        aboutRef={aboutRef}
-        sponsorRef={sponsorRef}
-        judgeRef={judgeRef}
-        scheduleRef={scheduleRef}
-        trackRef={trackRef}
-        applicationRef={applicationRef}
-        faqRef={faqRef}
+        sectionArray={sectionArray.current}
         scrollFunction={scrollToRef}
       ></Navbar>
 

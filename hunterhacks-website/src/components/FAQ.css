@@ -16,7 +16,7 @@
 }
 
 .question-container:hover{
-    color: rgb(184, 187, 12)
+    color: #FFD166; 
 }
 
 /* Made this wrapper so I can use variables for the close and open time */
