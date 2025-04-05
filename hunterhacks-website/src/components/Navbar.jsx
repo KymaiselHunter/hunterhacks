@@ -18,14 +18,16 @@ function Navbar({
     // handle scroll and event listener to close the sidebar on scroll
     const handleScroll = () => {
         sectionArray.forEach((section, index) => {
-            console.log(section.sectionRef)
             const rect = section.sectionRef.current?.getBoundingClientRect();
-            const circle = document.querySelector(`.navbar-stop-icon[data-index="${index}"]`);
+            const navbarCircle = document.querySelector(`.navbar-stop-icon[data-index="${index}"]`);
+            const sidebarCircle = document.querySelector(`.sidebar-stop-icon[data-index="${index}"]`);
 
-            if (rect.top < 100) {
-                circle.classList.add('navbar-stop-icon-active');
+            if (rect?.top < 100) {
+                navbarCircle?.classList.add('navbar-stop-icon-active');
+                sidebarCircle?.classList.add('navbar-stop-icon-active');
             } else {
-                circle.classList.remove('navbar-stop-icon-active');
+                navbarCircle?.classList.remove('navbar-stop-icon-active');
+                sidebarCircle?.classList.remove('navbar-stop-icon-active');
             }
         });
         
@@ -90,10 +92,29 @@ function Navbar({
             {
                 sectionArray.map((section, index) => (
                     <a 
+                        className="sidebar-item"
                         key={index}
                         onClick={() => scrollFunction(section.sectionRef)}
                     >
-                        {section.sectionName}
+                        <div
+                        className={[
+                            'sidebar-div',
+                            index === 0 && 'sidebar-front-div',
+                            index === sectionArray.length - 1 && 'sidebar-back-div'
+                        ].filter(Boolean).join(' ')}
+                        >
+                            <svg viewBox="0 0 12 12" width="11" height="11">
+                            <circle 
+                                data-index={index}
+                                className="sidebar-stop-icon" 
+                                cx="6" cy="6" r="5"  />
+                            </svg>
+                        </div>
+
+
+                        <p style={{padding:"0rem .5rem"}}>
+                            {section.sectionName}
+                        </p>
                     </a>
                 ))
             }     
