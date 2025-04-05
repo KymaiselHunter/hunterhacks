@@ -1,23 +1,32 @@
+// When using this funciton
+// Please pass sections as an array
+// Using an object form with two member variables
+// sectionName -> string that will show up in the nav
+// sectionRef -> reference to the section to scroll to
+
 import './Navbar.css'
 import HambergerIcon from '../assets/menu.svg'
-import {useRef} from 'react';
+import {useRef, useEffect} from 'react';
 
 function Navbar({
-    aboutRef, sponsorRef, judgeRef, scheduleRef, 
-    trackRef, applicationRef, faqRef,
+    sectionArray,
     scrollFunction
 })
 {
     const sidebarRef = useRef(null); 
-    const sidebarControl = (sidebarRef, sectionRef) => {
-        sidebarRef.current?.classList.toggle("reveal");
-        console.log("PLEASE")
 
-        if( sectionRef)
-        {
-            scrollFunction(sectionRef);
-        }
+    // handle scroll and event listener to close the sidebar on scroll
+    // only really important for mobile
+    const handleScroll = () => {
+        if (!sidebarRef.current?.classList.contains("reveal")) return;
+
+        sidebarRef.current.classList.remove('reveal');
     };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    },[]);
 
     return(
         <>
@@ -27,68 +36,38 @@ function Navbar({
                 </p>
 
                 <nav id="Nav">
-                    <a onClick={() => scrollFunction(aboutRef)}>
-                        About
-                    </a>
-                    <a onClick={() => scrollFunction(sponsorRef)}>
-                        Sponsors
-                    </a>
-                    <a onClick={() => scrollFunction(judgeRef)}>
-                        Judges
-                    </a>
-                    <a onClick={() => scrollFunction(scheduleRef)}>
-                        Schedule
-                    </a>
-                    <a onClick={() => scrollFunction(trackRef)}>
-                        Tracks
-                    </a>
-                    <a onClick={() => scrollFunction(applicationRef)}>
-                        Apply!
-                    </a>
-                    <a onClick={() => scrollFunction(faqRef)}>
-                        FAQ
-                    </a>
-                    
+                    {
+                        sectionArray.map((section, index) => (
+                            <a 
+                                key={index}
+                                onClick={() => scrollFunction(section.sectionRef)}
+                            >
+                                {section.sectionName}
+                            </a>
+                        ))
+                    }
                 </nav>
                 <a id="Hamburger">
-                    <img src={HambergerIcon} alt="Hamburger" onClick={()=>sidebarControl(sidebarRef)}></img>
+                    <img 
+                        src={HambergerIcon} 
+                        alt="Hamburger" 
+                        onClick={()=>sidebarRef.current?.classList.toggle("reveal")}
+                    ></img>
                 </a>
             </div>
 
             <nav ref={sidebarRef} className='Sidebar'>
-                <a onClick={() => sidebarControl(sidebarRef,aboutRef)}>
-                    About
-                </a>
-                <a onClick={() => sidebarControl(sidebarRef,sponsorRef)}>
-                    Sponsors
-                </a>
-                <a onClick={() => sidebarControl(sidebarRef, judgeRef)}>
-                    Judges
-                </a>
-                <a onClick={() => sidebarControl(sidebarRef, scheduleRef)}>
-                    Schedule
-                </a>
-                <a onClick={() => sidebarControl(sidebarRef, trackRef)}>
-                    Tracks
-                </a>
-                <a onClick={() => sidebarControl(sidebarRef, applicationRef)}>
-                    Apply!
-                </a>
-                <a onClick={() => sidebarControl(sidebarRef, faqRef)}>
-                    FAQ
-                </a>
-                
+            {
+                sectionArray.map((section, index) => (
+                    <a 
+                        key={index}
+                        onClick={() => scrollFunction(section.sectionRef)}
+                    >
+                        {section.sectionName}
+                    </a>
+                ))
+            }     
             </nav>
         </>
     );
 }export default Navbar
-
-// function Sidebar({
-//     aboutRef, sponsorRef, judgeRef, scheduleRef, 
-//     trackRef, applicationRef, faqRef,
-//     scrollFunction
-// }){
-//     return(
-        
-//     );
-// }
