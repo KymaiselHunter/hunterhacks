@@ -1,0 +1,32 @@
+.question-container{
+    width: 100%;
+    max-width: 900px;
+    /* height: 2rem; */
+
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.25);
+    padding: .25em;
+
+}
+
+.question-container:hover{
+    color: rgb(184, 187, 12)
+}
+
+/* Made this wrapper so I can use variables for the close and open time */
+.faq-wrapper {
+    --faq-open-time: 600ms;
+    --faq-close-time: 400ms;
+  }
+
+.answer-container{
+    max-height: 0px;
+    overflow: hidden;
+
+    
+    transition: max-height var(--faq-close-time) ease-out;
+}
+
+.answer-reveal{
+    max-height: 500px;
+    transition: max-height var(--faq-open-time) ease-in-out;
+}
