@@ -2,6 +2,7 @@ import { useRef } from 'react'
 
 import Navbar from './components/Navbar'
 import Section from './components/Section'
+import FAQ from './components/FAQ'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -21,8 +22,11 @@ function App() {
     <div
       style={{
         minHeight: '100vh',
-        width: '100vw'
+        width: '100vw',
       }}
+      // display:'flex',
+      // flexDirection: 'column',
+      // alignItems: 'center'
 
       className='All'
     >
@@ -37,7 +41,8 @@ function App() {
         scrollFunction={scrollToRef}
       ></Navbar>
 
-      <main>
+      {/* style={{ maxWidth: '640px'}} */}
+      <main >
         <h1>HunterHacks</h1>
         
         <Section
@@ -70,78 +75,118 @@ function App() {
 
 
 
-      <Section
-        title="Judges + Images:"
-        ref={judgeRef}
-        >
+		<Section
+		title="Judges + Images:"
+		ref={judgeRef}
+		>
 
-      <p>
-      Photo & Bio - Background/expertise, perhaps a fun fact or is that corny?, LinkedIn
-        
-        Suggestions:
-        Grid Layout with Headshots: Click-to-expand bios?
-        Flexbox it up
-      </p>
-      </Section>
+		<p>
+		Photo & Bio - Background/expertise, perhaps a fun fact or is that corny?, LinkedIn
+		
+		Suggestions:
+		Grid Layout with Headshots: Click-to-expand bios?
+		Flexbox it up
+		</p>
+		</Section>
 
-      <Section
-        title="Hackathon Schedule:"
-        ref={scheduleRef}
-        >
-      </Section>
-      
-      <Section
-        title="Tracks (no prizes until actual hackathon):"
-        ref={trackRef}
-        >
-      </Section>
-                
-      
-      <Section
-        title="Link to Hackathon Application:"
-        ref={applicationRef}
-      >
-      </Section>
+		<Section
+		title="Hackathon Schedule:"
+		ref={scheduleRef}
+		>
+		</Section>
+		
+		<Section
+		title="Tracks (no prizes until actual hackathon):"
+		ref={trackRef}
+		>
+		</Section>
+				
+		
+		<Section
+		title="Link to Hackathon Application:"
+		ref={applicationRef}
+		>
+		</Section>
 
-        
+		
 
-      <Section 
-        title="Frequently Asked Questions"
-        ref={faqRef}
-      >
-      <ul>
-          <li>What is HunterHacks?</li>
-          <li>When and where is the hackathon?</li>
-          <li>Who can participate?</li>
-          <li>Do I need coding experience?</li>
-          <li>How do I register?</li>
-          <li>Can I volunteer to help out? - for student mentors??</li>
-          <li>Do I have to submit a project?</li>
-          <li>Will there be food and swag?</li>
-          <li>What if I need help during the hackathon? <em>*Link to discord*</em></li>
-          <li>
-            What should I bring?
-            <ul>
-              <li>Laptop</li>
-              <li>Charger</li>
-              <li>Headphones</li>
-              <li>Notebook</li>
-              <li>Pens</li>
-              <li>Water Bottle</li>
-              <li>Snacks</li>
-              <li>Pre-installed Software (*maybe give suggestions idk*)</li>
-              <li>A smile :)</li>
-            </ul>
+		<Section 
+		title="Frequently Asked Questions"
+		ref={faqRef}
+		>
+		<FAQ question={"What is HunterHacks?"}>
+			<p>
+			ansadrfewr\n 
+			</p>
+			<p>
+			ansadrfewr\n 
+			</p>
+			<p>
+			ansadrfewr\n 
+			</p>
+			<p>
+			ansadrfewr\n 
+			</p>
+		</FAQ>
 
-          </li>
-          <li>How do teams work?</li>
-          <li>What if I don’t have a team?</li>
-          <li>Is HunterHacks in-person?</li>
-          <li>What are the tracks? How do they work? ← maybe put prizes here too? - here or separate question?? We can consider</li>
-          <li>What do I win?</li>
-          <li>Will there be workshops?</li>
-        </ul>
-      </Section>
+		<FAQ question={"When and where is the hackathon?"}>
+		</FAQ>
+		
+		<FAQ question={"Who can participate?"}>
+		</FAQ>
+		
+		<FAQ question={"Do I need coding experience?"}>
+		</FAQ>
+		
+		<FAQ question={"How do I register?"}>
+		</FAQ>
+		
+		<FAQ question={"Can I volunteer to help out? -for student mentors??"}>
+		</FAQ>
+		
+		<FAQ question={"Do I have to submit a project?"}>
+		</FAQ>
+		
+		<FAQ question={"Will there be food and swag?"}>
+		</FAQ>
+		
+		<FAQ question={"What if I need help during the hackathon? *Link to discord*"}>
+		</FAQ>
+		
+		<FAQ question={"What should I bring?"}>
+			<ul>
+				<li>Laptop</li>
+				<li>Charger</li>
+				<li>Headphones</li>
+				<li>Notebook</li>
+				<li>Pens</li>
+				<li>Water Bottle</li>
+				<li>Snacks</li>
+				<li>Pre-installed Software (*maybe give suggestions idk*)</li>
+				<li>A smile :)</li>
+			</ul>
+		</FAQ>
+		
+		<FAQ question={"How do teams work?"}>
+		</FAQ>
+		
+		<FAQ question={"What if I don’t have a team?"}>
+		</FAQ>
+		
+		<FAQ question={"Is HunterHacks in-person?"}>
+		</FAQ>
+		
+		<FAQ question={"What are the tracks? How do they work? ← maybe put prizes here too? - here or separate question?? We can consider "}>
+		</FAQ>
+		
+		<FAQ question={"What do I win?"}>
+		</FAQ>
+		
+		<FAQ question={"Will there be workshops?"}>
+		</FAQ>
+		
+		
+		</Section>
       </main>
     </div>
   )
