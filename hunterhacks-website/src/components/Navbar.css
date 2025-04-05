@@ -1,4 +1,4 @@
-#Navbar{
+#navbar{
     /* Navbar positioning */
     position: sticky;
     top: 0px;
@@ -26,7 +26,7 @@
     justify-content: space-between;
 }
 
-#Nav{
+.nav{
     display:none;
     /* gap:1rem; */
 
@@ -34,7 +34,84 @@
     /* position: relative; */
 }
 
-.Sidebar{
+
+
+
+.navbar-item{
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    /* textAlign: center; */
+}
+
+.navbar-item p{
+    transform: translate(-3px, 6px)rotate(315deg);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #F1F1FF;
+    
+}
+
+.navbar-item:hover p{
+    color: #FFD166; 
+}
+
+.navbar-div {
+    background-color: #4DAD8C;
+    height: 14px; 
+    display: flex;
+    align-items: center;
+    padding-left: .5rem;
+    margin-top: 1.5rem;
+}
+
+.navbar-front-div{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    
+}
+
+.navbar-back-div{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+    width: 30px;
+    
+}
+
+.navbar-stop-icon{
+    fill: black;
+    transition: fill 200ms ease;
+}
+
+.navbar-stop-icon-active{
+    fill:  #fcd34d;
+
+}
+
+
+
+
+@media (min-width: 640px) { 
+    #Hamburger
+    {
+        display: none;
+    }
+    .reveal{
+        display: none;
+    }
+    .nav{
+        display: flex;
+    }
+    .sidebar {
+        display: none;
+    }
+}
+
+
+
+
+
+.sidebar{
     position: fixed;
     top: 4rem;
     right: 0;
@@ -61,56 +138,3 @@
 .reveal{
     display: flex;
 }
-
-/* 
-@media (max-width: 639px) {
-    #Sidebar {
-        display: none;
-    }
-    #Nav{
-        display:none;
-    }
-  } */
-
-@media (min-width: 640px) { 
-    #Hamburger
-    {
-        display: none;
-    }
-    .reveal{
-        display: none;
-    }
-    #Nav{
-        display: flex;
-    }
-    #Sidebar {
-        display: none;
-    }
-}
-
-.navbar-item{
-    display: inline-block;
-    position: relative;
-    /* textAlign: center; */
-}
-
-.navbar-item p{
-    transform: translate(-3px, 6px)rotate(315deg);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #F1F1FF;
-    
-}
-
-.navbar-item:hover p{
-    color: #FFD166; 
-}
-
-.navbar-item div {
-    background-color: #96c76cc9;
-    height: 14px; /* 👈 smaller height */
-    display: flex;
-    align-items: center;
-    padding-left: .5rem;
-    margin-top: 1.5rem;
-}
-

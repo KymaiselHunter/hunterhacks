@@ -16,8 +16,19 @@ function Navbar({
     const sidebarRef = useRef(null); 
 
     // handle scroll and event listener to close the sidebar on scroll
-    // only really important for mobile
     const handleScroll = () => {
+        sectionArray.forEach((section, index) => {
+            console.log(section.sectionRef)
+            const rect = section.sectionRef.current?.getBoundingClientRect();
+            const circle = document.querySelector(`.navbar-stop-icon[data-index="${index}"]`);
+
+            if (rect.top < 100) {
+                circle.classList.add('navbar-stop-icon-active');
+            } else {
+                circle.classList.remove('navbar-stop-icon-active');
+            }
+        });
+        
         if (!sidebarRef.current?.classList.contains("reveal")) return;
 
         sidebarRef.current.classList.remove('reveal');
@@ -30,12 +41,12 @@ function Navbar({
 
     return(
         <>
-            <div id="Navbar">
+            <div id="navbar">
                 <p>
                     HunterHacks    
                 </p>
 
-                <nav id="Nav">
+                <nav className="nav">
                     {
                         sectionArray.map((section, index) => (
                             <a 
@@ -46,9 +57,18 @@ function Navbar({
                                 <p style={{padding:"0rem .5rem"}}>
                                     {section.sectionName}
                                 </p>
-                                <div>
+                                <div
+                                className={[
+                                    'navbar-div',
+                                    index === 0 && 'navbar-front-div',
+                                    index === sectionArray.length - 1 && 'navbar-back-div'
+                                ].filter(Boolean).join(' ')}
+                                >
                                     <svg viewBox="0 0 12 12" width="11" height="11">
-                                    <circle cx="6" cy="6" r="6" fill="black" />
+                                    <circle 
+                                        data-index={index}
+                                        className="navbar-stop-icon" 
+                                        cx="6" cy="6" r="5"  />
                                     </svg>
                                 </div>
 
@@ -66,7 +86,7 @@ function Navbar({
                 </a>
             </div>
 
-            <nav ref={sidebarRef} className='Sidebar'>
+            <nav ref={sidebarRef} className='sidebar'>
             {
                 sectionArray.map((section, index) => (
                     <a 
