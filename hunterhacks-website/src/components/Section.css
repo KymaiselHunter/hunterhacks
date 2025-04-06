@@ -19,12 +19,17 @@
     
 }
 
+/* 
+  when the observer sees the section in the window
+  use css to bring the section in
+  */
 .section-reveal {
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0%);
 }
 
+/* no transitions if reduced motion is enabled */
 @media (prefers-reduced-motion: reduce) {
     .section,
     .section-reveal {
