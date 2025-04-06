@@ -15,13 +15,15 @@ function Navbar({
 {
     const sidebarRef = useRef(null); 
 
-    // handle scroll and event listener to close the sidebar on scroll
+    // function to handle scrolling on page
+    // used for navbar decoration and closing the sidebar
     const handleScroll = () => {
+        // check if each section has been passed, if so, decorate it in nav/side
         sectionArray.forEach((section, index) => {
             const rect = section.sectionRef.current?.getBoundingClientRect();
             const navbarCircle = document.querySelector(`.navbar-stop-icon[data-index="${index}"]`);
             const sidebarCircle = document.querySelector(`.sidebar-stop-icon[data-index="${index}"]`);
-
+            
             if (rect?.top < 100) {
                 navbarCircle?.classList.add('navbar-stop-icon-active');
                 sidebarCircle?.classList.add('navbar-stop-icon-active');
@@ -31,16 +33,21 @@ function Navbar({
             }
         });
         
+        // handle scroll and event listener to close the sidebar on scroll
         if (!sidebarRef.current?.classList.contains("reveal")) return;
 
         sidebarRef.current.classList.remove('reveal');
     };
 
+    // use effect to enable the scrolling listener once the page is loaded
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     },[]);
 
+    // returns two things
+    // a navbar and a sidebar, only one should be
+    // active at at time. css media query to handle visibility 
     return(
         <>
             <div id="navbar">
@@ -48,8 +55,10 @@ function Navbar({
                     HunterHacks    
                 </p>
 
+                {/* navigation for big screens */}
                 <nav className="nav">
                     {
+                        // loop to make each navigational item (dynamic)
                         sectionArray.map((section, index) => (
                             <a 
                                 className="navbar-item"
@@ -79,6 +88,8 @@ function Navbar({
                         ))
                     }
                 </nav>
+
+                {/* hamburger to open side bar */}
                 <a id="Hamburger">
                     <img 
                         src={HambergerIcon} 
@@ -87,9 +98,11 @@ function Navbar({
                     ></img>
                 </a>
             </div>
-
+            
+            {/* side bar for small screens */}
             <nav ref={sidebarRef} className='sidebar'>
             {
+                // loop to make each navigational item (dynamic)
                 sectionArray.map((section, index) => (
                     <a 
                         className="sidebar-item"

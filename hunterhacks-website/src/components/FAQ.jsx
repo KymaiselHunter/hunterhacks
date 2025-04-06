@@ -19,6 +19,8 @@ function FAQ(
 )
 {
     const faqRef=useRef(null);
+
+    // onclick function that reveals/hides answer 
     const toggleAnswer = () => {
         faqRef.current.classList.toggle('answer-reveal')
     }
