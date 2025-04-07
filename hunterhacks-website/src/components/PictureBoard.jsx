@@ -9,18 +9,18 @@ import {useState, useEffect, useRef} from 'react';
 
 function PictureBoard()
 {
-    // const imageArray = [
-    //     img1, img2, img3, img4, 
-    //     img3,img2, 
-    //     img1, img2, img3, img4, 
-    //     img3,img2, 
-
-    // ];
     const imageArray = [
         img1, img2, img3, img4, 
         img3,img2, 
-        img1, img2, img3, 
+        img1, img2, img3, img4, 
+        img3,img2, 
+
     ];
+    // const imageArray = [
+    //     img1, img2, img3, img4, 
+    //     img3,img2, 
+    //     img1, img2, img3, 
+    // ];
     // const imageArray = [
     //     img1, img2, img3, img4, 
     //     img3,img2, 
@@ -54,7 +54,7 @@ function PictureBoard()
                 let newRowCount = 0;
                 if (width >= 1024) newRowCount = 4;
                 // else if (width >= 768) newRowCount = 4;
-                else if (width >= 640) newRowCount = 3;
+                // else if (width >= 640) newRowCount = 3;
                 else newRowCount = 3;
 
                 if (newRowCount !== rowCount.current) {

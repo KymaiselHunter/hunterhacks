@@ -13,15 +13,18 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap:23px;
+    gap:8px;
 }
 
 .picture-board-image{
     width: 100%;
     border-radius: 8px;
+    transition: 300ms ease filter,
+    300ms ease transform;
 }
 
 .picture-board-column img:hover {
     filter: grayscale(100%);
-    transition: 300ms ease filter;
+    transform: scale(1.02);
+    
   }
