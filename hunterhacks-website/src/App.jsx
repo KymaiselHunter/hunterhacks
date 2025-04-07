@@ -6,6 +6,7 @@ import { useRef } from 'react'
 // respective jsx files to read specific details
 import Navbar from './components/Navbar'
 import FAQ from './components/FAQ'
+import PictureBoard from './components/PictureBoard'
 
 // Section is important as this is how navigation knows
 // where everything is, as well as a way to organize
@@ -112,6 +113,7 @@ function App() {
 						Grid Layout with Headshots: Click-to-expand bios?
 						Flexbox it up
 					</p>
+					<PictureBoard/>
 				</Section>
 
 				<Section

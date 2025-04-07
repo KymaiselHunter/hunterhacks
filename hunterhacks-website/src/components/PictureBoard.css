@@ -1,0 +1,27 @@
+.picture-board{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(100px, 30vw,250px)); */
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.picture-board-column{
+    width: clamp(100px, 100%,200px);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:23px;
+}
+
+.picture-board-image{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.picture-board-column img:hover {
+    filter: grayscale(100%);
+    transition: 300ms ease filter;
+  }
