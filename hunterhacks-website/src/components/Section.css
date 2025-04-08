@@ -1,4 +1,5 @@
 .section {
+    /* Transition stuff */
     opacity: 0;
     filter: blur(3px);
     transform: translateX(-15%); /* Optional: Add small movement */
@@ -7,18 +8,28 @@
 
     z-index: 0;
 
-
+    /* when clicking on navbar, give some space on top */
     scroll-margin-top: 6rem;
 
+
+    /* Center content of each section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 
+/* 
+  when the observer sees the section in the window
+  use css to bring the section in
+  */
 .section-reveal {
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0%);
 }
 
+/* no transitions if reduced motion is enabled */
 @media (prefers-reduced-motion: reduce) {
     .section,
     .section-reveal {
