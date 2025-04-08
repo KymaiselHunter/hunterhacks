@@ -1,38 +1,9 @@
-import img1 from '../assets/placeholder1.jpg';
-import img2 from '../assets/placeholder2.jpg';
-import img3 from '../assets/placeholder3.jpeg';
-import img4 from '../assets/placeholder4.jpg';
-
 import './PictureBoard.css';
 
 import {useState, useEffect, useRef} from 'react';
 
-function PictureBoard()
+function PictureBoard({profileArray})
 {
-    const imageArray = [
-        img1, img2, img3, img4, 
-        img3,img2, 
-        img1, img2, img3, img4, 
-        img3,img2, 
-
-    ];
-    // const imageArray = [
-    //     img1, img2, img3, img4, 
-    //     img3,img2, 
-    //     img1, img2, img3, 
-    // ];
-    // const imageArray = [
-    //     img1, img2, img3, img4, 
-    //     img3,img2, 
-    //     img1, img2, img3, img4, 
-    //     img3,img2, 
-    //     img1, img2, img3, img4, 
-    //     img3,img2, 
-    //     img1, img2, img3, img4, 
-    //     img3,img2, 
-
-    // ];
-
     const [imageMatrix, setImageMatrix] = useState([[]]);
     const sortedImageArray = useRef([]);
 
@@ -74,14 +45,17 @@ function PictureBoard()
     
     async function loadAndSortImages() 
     {
+
         const results = await Promise.all(
-            imageArray.map((src, index) => {
+            profileArray.map((profile, index) => {
             return new Promise(resolve => {
                 const img = new Image();
+                const name = profile.name
+                const src = profile.src
                 img.src = src;
                 img.onload = () => {
                 const heightToWidthRatio = img.naturalHeight / img.naturalWidth;
-                resolve({ src, heightToWidthRatio, index });
+                resolve({ src, heightToWidthRatio, index, name});
                 };
             });
             })
@@ -111,13 +85,13 @@ function PictureBoard()
                 }
             }
             
-            sortMatrix[colToAdd].push(sortedImageArray.current[i].index);
+            sortMatrix[colToAdd].push(sortedImageArray.current[i]);
             currHeights[colToAdd]+=sortedImageArray.current[i].heightToWidthRatio;
         }
         
         for (let i = 0; i < rowCount.current; i++) 
         {
-            sortMatrix[i].sort();
+            sortMatrix[i].sort((a, b) => a.index - b.index);
         }
 
         console.log(sortMatrix)
@@ -138,13 +112,23 @@ function PictureBoard()
                     key={rowIndex}
                     className='picture-board-column'
                 >
-                    {row.map((imageIndex, columnIndex) => (
-                        <img
-                            key={columnIndex}
-                            src={imageArray[imageIndex]}
-                            alt="whattttt"
-                            className='picture-board-image'
-                        ></img>
+                    {row.map((profile, columnIndex) => (
+                        <figure
+                        key={columnIndex}    
+                        className='picture-board-image'
+                        >
+                            <img
+                                    
+                                    src={profile.src}
+                                    alt="whattttt"
+                                ></img>
+
+                            <figcaption className='picture-board-caption'>
+                                <h3>
+                                    {profile.name}
+                                </h3>
+                            </figcaption>
+                        </figure>
                     ))}
                 </div>
             ))}
