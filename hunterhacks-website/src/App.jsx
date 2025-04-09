@@ -7,6 +7,15 @@ import { useRef } from 'react'
 import Navbar from './components/Navbar'
 import FAQ from './components/FAQ'
 
+// Imports for picture board
+import img1 from './assets/placeholder1.jpg';
+import img2 from './assets/placeholder2.jpg';
+import img3 from './assets/placeholder3.jpeg';
+import img4 from './assets/placeholder4.jpg';
+
+
+import PictureBoard from './components/PictureBoard'
+
 // Section is important as this is how navigation knows
 // where everything is, as well as a way to organize
 // each section into its own component
@@ -47,6 +56,23 @@ function App() {
 		{ sectionName: 'Apply!', sectionRef: applicationRef },
 		{ sectionName: 'FAQ', sectionRef: faqRef },
 	]);
+
+	// =========================
+	// picture board prop stuff
+	const judgeProfiles = [
+		{src: img1, name:'placeholder1'},
+		{src: img2, name:'placeholder2'},
+		{src: img3, name:'placeholder3'},
+		{src: img4, name:'Batman'},
+		{src: img3, name:'placeholder3'},
+		{src: img2, name:'placeholder2'},
+		{src: img1, name:'placeholder1'},
+		{src: img2, name:'placeholder2'},
+		{src: img3, name:'placeholder3'},
+		{src: img4, name:'Batman'},
+		{src: img3, name:'placeholder3'},
+		{src: img2, name:'placeholder2'},
+	];
 	
 	return (
 		<div
@@ -113,6 +139,10 @@ function App() {
 						Grid Layout with Headshots: Click-to-expand bios?
 						Flexbox it up
 					</p>
+					<PictureBoard
+						profileArray={judgeProfiles}
+					>
+					</PictureBoard>
 				</Section>
 
 				<Section
