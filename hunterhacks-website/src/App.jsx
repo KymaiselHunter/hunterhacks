@@ -14,7 +14,7 @@ import FAQ from './components/FAQ'
 // all section content should be a child, while it's header
 // and reference should be passed as components
 import Section from './components/Section'
-import Logo from './components/Logo'
+import Logo from './components/TrainLogo'
 
 function App() {
 	// references for each section
@@ -71,7 +71,6 @@ function App() {
 			*/}
 			<main className="responsive-container">
         <Logo></Logo>
-				<h1>HunterHacks</h1>
 
 				<Section
 				title="About this Hackathon:"
