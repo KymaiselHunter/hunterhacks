@@ -7,6 +7,10 @@ import { useRef } from 'react'
 import Navbar from './components/Navbar'
 import FAQ from './components/FAQ'
 
+// Arts logo stuffs
+import TrainLogo from './components/TrainLogo'
+import BirdTrainLogo from './components/BirdTrainLogo';
+
 // Imports for picture board
 import img1 from './assets/placeholder1.jpg';
 import img2 from './assets/placeholder2.jpg';
@@ -23,7 +27,6 @@ import PictureBoard from './components/PictureBoard'
 // all section content should be a child, while it's header
 // and reference should be passed as components
 import Section from './components/Section'
-import Logo from './components/TrainLogo'
 
 function App() {
 	// references for each section
@@ -96,7 +99,7 @@ function App() {
 				and a header
 			*/}
 			<main className="responsive-container">
-        <Logo></Logo>
+        <TrainLogo></TrainLogo>
 
 				<Section
 				title="About this Hackathon:"
@@ -126,6 +129,7 @@ function App() {
 					</p>
 				</Section>
 
+        <BirdTrainLogo></BirdTrainLogo>
 
 
 				<Section

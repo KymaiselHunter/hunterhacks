@@ -1,0 +1,43 @@
+.bird-train-container{
+    display: flex;
+    
+
+    /* background-color: antiquewhite; */
+    justify-content: center;
+    align-items: center;
+
+    --cloud-move-time:30s;
+}
+
+.bird-train-svg{
+    /* width: 100%; */
+    aspect-ratio: 1/1;
+    
+    width: 100%;
+    height: 100%;
+
+    max-height: 50vh;
+}
+
+#clouds-left,
+#clouds-right{
+    animation: var(--cloud-move-time) linear infinite moveRight;
+}
+
+@keyframes moveRight{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(100%);
+    }
+}
+
+
+/* no transitions if reduced motion is enabled */
+@media (prefers-reduced-motion: reduce) {
+    .bird-train-container {
+        --cloud-move-time: 0ms;
+    }
+  }
