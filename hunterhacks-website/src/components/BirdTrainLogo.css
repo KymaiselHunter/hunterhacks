@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 
-    --cloud-move-time:30s;
+    --cloud-move-time:100s;
 }
 
 .bird-train-svg{
@@ -19,20 +19,34 @@
     max-height: 50vh;
 }
 
-#clouds-left,
-#clouds-right{
-    animation: var(--cloud-move-time) linear infinite moveRight;
+#clouds-left{
+    animation: var(--cloud-move-time) linear infinite cloudLeftMove;
 }
 
-@keyframes moveRight{
+#clouds-right{
+    animation: var(--cloud-move-time) linear infinite cloudRightMove;
+
+}
+
+@keyframes cloudRightMove{
     from{
-        transform: translateX(0);
+        transform: translateX(0px);
     }
 
     to{
-        transform: translateX(100%);
+        transform: translateX(107px);
     }
-}
+} 
+
+@keyframes cloudLeftMove{
+    from{
+        transform: translateX(-109px);
+    }
+
+    to{
+        transform: translateX(-2px);
+    }
+} 
 
 
 /* no transitions if reduced motion is enabled */
