@@ -1,4 +1,11 @@
 .faq-holder{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 640px) { 
+    .faq-holder{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
