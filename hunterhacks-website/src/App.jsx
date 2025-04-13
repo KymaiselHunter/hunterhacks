@@ -63,6 +63,8 @@ const judgeProfiles = [
 // all section content should be a child, while it's header
 // and reference should be passed as components
 import Section from './components/Section'
+import About from './components/About'
+import FAQ from './components/FAQ'
 
 function App() {
 	// references for each section
@@ -127,16 +129,10 @@ function App() {
 				<h1>HunterHacks</h1>
 
 				<Section
-				title="About this Hackathon:"
+				title=""
 				ref={aboutRef}
 				>
-					<p>
-						HunterHacks is Hunter College’s premier student-led hackathon, dedicated to empowering students to use technology for social wellness and community impact. We believe that innovation thrives when diverse minds come together to solve real-world problems, and at HunterHacks, we’re here to make that happen—one hack at a time.
-						Hackathons aren’t just about coding. They’re about collaborating, learning, and building. Whether you’re an experienced hacker, an aspiring designer, or just tech-curious, HunterHacks is the perfect space to experiment with new ideas, connect with like-minded individuals, and push the boundaries of what technology can do for mental health, community well-being, and social change. ?? - is this too specific?
-						This year, participants will form teams, develop innovative projects, and present their work to a panel of judges for a chance to win prizes. But beyond the competition, HunterHacks is about learning and growing. We’ll have workshops, mentorship, and networking opportunities to help you hone your skills and bring your ideas to life.
-						Join us for a weekend of hacking, creativity, and collaboration as we take flight, building innovative solutions that make a real impact.
-
-					</p>
+					<About></About>
 				</Section>
 
 				<Section
