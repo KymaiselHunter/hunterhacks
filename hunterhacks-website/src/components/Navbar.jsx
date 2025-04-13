@@ -4,6 +4,7 @@
 // sectionName -> string that will show up in the nav
 // sectionRef -> reference to the section to scroll to
 
+import './NavbarMobile.css'
 import './Navbar.css'
 import HambergerIcon from '../assets/menu.svg'
 import {useRef, useEffect} from 'react';
@@ -21,15 +22,15 @@ function Navbar({
         // check if each section has been passed, if so, decorate it in nav/side
         sectionArray.forEach((section, index) => {
             const rect = section.sectionRef.current?.getBoundingClientRect();
-            const navbarCircle = document.querySelector(`.navbar-stop-icon[data-index="${index}"]`);
+            const trainbarCircle = document.querySelector(`.trainbar-stop-icon[data-index="${index}"]`);
             const sidebarCircle = document.querySelector(`.sidebar-stop-icon[data-index="${index}"]`);
             
             if (rect?.top < 100) {
-                navbarCircle?.classList.add('navbar-stop-icon-active');
-                sidebarCircle?.classList.add('navbar-stop-icon-active');
+                trainbarCircle?.classList.add('trainbar-stop-icon-active');
+                sidebarCircle?.classList.add('sidebar-stop-icon-active');
             } else {
-                navbarCircle?.classList.remove('navbar-stop-icon-active');
-                sidebarCircle?.classList.remove('navbar-stop-icon-active');
+                trainbarCircle?.classList.remove('trainbar-stop-icon-active');
+                sidebarCircle?.classList.remove('sidebar-stop-icon-active');
             }
         });
         
@@ -50,45 +51,7 @@ function Navbar({
     // active at at time. css media query to handle visibility 
     return(
         <>
-            <div id="navbar">
-                <p>
-                    HunterHacks    
-                </p>
-
-                {/* navigation for big screens */}
-                <nav className="nav">
-                    {
-                        // loop to make each navigational item (dynamic)
-                        sectionArray.map((section, index) => (
-                            <a 
-                                className="navbar-item"
-                                key={index}
-                                onClick={() => scrollFunction(section.sectionRef)}
-                            >
-                                <p style={{padding:"0rem .5rem"}}>
-                                    {section.sectionName}
-                                </p>
-                                <div
-                                className={[
-                                    'navbar-div',
-                                    index === 0 && 'navbar-front-div',
-                                    index === sectionArray.length - 1 && 'navbar-back-div'
-                                ].filter(Boolean).join(' ')}
-                                >
-                                    <svg viewBox="0 0 12 12" width="11" height="11">
-                                    <circle 
-                                        data-index={index}
-                                        className="navbar-stop-icon" 
-                                        cx="6" cy="6" r="5"  />
-                                    </svg>
-                                </div>
-
-
-                            </a>
-                        ))
-                    }
-                </nav>
-
+            <div className="topbar">
                 {/* hamburger to open side bar */}
                 <a id="Hamburger">
                     <img 
@@ -132,6 +95,54 @@ function Navbar({
                 ))
             }     
             </nav>
+
+
+            {/* navigation for big screens */}
+            <nav className="trainbar">
+            {
+                // loop to make each navigational item (dynamic)
+                sectionArray.map((section, index) => (
+                    <a 
+                        className="trainbar-item"
+                        key={index}
+                        onClick={() => scrollFunction(section.sectionRef)}
+                    >
+                        <div
+                        className={[
+                            'trainbar-div',
+                            index === 0 && 'trainbar-front-div',
+                            index === sectionArray.length - 1 && 'trainbar-back-div'
+                        ].filter(Boolean).join(' ')}
+                        >
+                            {/* <svg viewBox="0 0 12 12" width="11" height="11">
+                            <circle 
+                                data-index={index}
+                                className="trainbar-stop-icon" 
+                                cx="6" cy="6" r="5"  />
+                            </svg> */}
+
+                            <svg 
+                            width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            className="trainbar-stop"
+                            >
+                            <circle 
+                            cx="10.5" cy="10.5" r="9" 
+                            data-index={index}
+                            className="trainbar-stop-icon" // fill="black" 
+                            stroke="white" strokeWidth="3"/>
+                            </svg> 
+                        </div>
+
+                        <p style={{padding:"0rem .5rem"}}>
+                            {section.sectionName}
+                        </p>
+
+                    </a>
+                ))
+            }
+            </nav>
         </>
     );
 }export default Navbar
+
+

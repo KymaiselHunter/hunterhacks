@@ -53,6 +53,7 @@ function App() {
 		style={{
 			minHeight: '100vh',
 			width: '100vw',
+			
 		}}
 
 		className='All'

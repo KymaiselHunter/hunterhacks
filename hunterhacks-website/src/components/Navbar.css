@@ -1,210 +1,38 @@
-/* All the navbar styling */
-#navbar{
-    /* Navbar positioning */
-    position: sticky;
-    top: 0px;
-    z-index: 50;
 
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0rem 2rem;
-    height: 5rem;
-
-
-    /* Navbar styling */
-    background-color: rgba(17, 12, 41, .75);
-    /* background: transparent; */
-    /* background-color: rgb(17, 12, 41); */
-    backdrop-filter: blur(10px);               /* blur background */
-    -webkit-backdrop-filter: blur(10px);       /* for Safari */
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  
-    /* content within navbar styling */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.trainbar{
+    display: none;
 }
 
-.nav{
-    display:none;
-    /* gap:1rem; */
-
-    height: 100%;
-    /* position: relative; */
-}
-
-
-
-
-.navbar-item{
-    display: inline-block;
-    position: relative;
-    width: 70px;
-    /* textAlign: center; */
-}
-
-.navbar-item p{
-    transform: translate(-3px, 6px)rotate(315deg);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #F1F1FF;
-    
-}
-
-
-
-.navbar-div {
-    background-color: #4DAD8C;
-    height: 14px; 
-    display: flex;
-    align-items: center;
-    padding-left: .5rem;
-    margin-top: 1.5rem;
-}
-
-.navbar-front-div{
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    
-}
-
-.navbar-back-div{
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    
-    width: 30px;
-    
-}
-
-/* shared navbar and sidbar styling */
-#navbar,
-.sidebar {
-  user-select: none;
-  -webkit-user-select: none; /* Safari support */
-  -moz-user-select: none;    /* Firefox support */
-  -ms-user-select: none;     /* Old Edge support */
-  -webkit-touch-callout: none; /* Disable callout on long press in Safari */
-  -webkit-user-drag: none;     /* Prevent drag in Safari */
-}
-
-
-.navbar-stop-icon,
-.sidebar-stop-icon
+@media (min-width:640px)
 {
-    fill: black;
-    transition: fill 200ms ease;
-}
+    .trainbar{
+        position: sticky;
+        top: 0;
+        height: 100vh;
 
-.navbar-stop-icon-active,
-.sidebar-stop-icon-active
-{
-    fill:  #fcd34d;
-
-}
-
-.navbar-item:hover p,
-.sidebar-item:hover p
-{
-    color: #FFD166; 
-}
-
-/* when things are big apply below */
-@media (min-width: 640px) { 
-    #Hamburger
-    {
-        display: none;
-    }
-    .reveal{
-        display: none;
-        visibility:hidden;
-    }
-    .nav{
         display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+
+
+        width: 240px;
+        margin-left: 3rem;
     }
-    .sidebar {
-        display: none;
-        visibility: hidden !important;
-        
-    }
-}
-
-
-
-/* sidebar styling */
-
-:root{
-    --sidebar-toggle-time: 100ms;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    :root{
-        --sidebar-toggle-time: 0ms;
-    }
-  }
-
-
-.sidebar{
-    position: fixed;
-    top: 5rem;
-    right: 0;
-    /* height: 100vh;  */
-    padding: 1rem 2.5rem;
-    width: 200px;
-    z-index:51;
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    display: flex;
-    gap:0rem;
-
-    visibility: hidden;
-    transform: translateX(100%);
-
-
-    transition: 
-        var(--sidebar-toggle-time) ease transform,
-        var(--sidebar-toggle-time) visibility;
 }
 
-.sidebar::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1; /* Place behind the content */
-    
-    background-color: rgba(17, 12, 41, 0.75);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
-  }
-  
 
-
-
-.reveal{
-    visibility: visible;
-
-    transform: translateX(0%);
-
-    transition: 
-        var(--sidebar-toggle-time) ease transform,
-        var(--sidebar-toggle-time) visibility;
-}
-
-.sidebar-item{
+.trainbar-item{
     display: flex;
     align-items: center;
     /* gap:.5rem; */
 
     height: 3rem;
+    width: 500px;
 }
 
-.sidebar-item p{
+.trainbar-item p{
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #F1F1FF;
     margin: 0;
@@ -212,22 +40,48 @@
     
 }
 
-.sidebar-div{
-    background-color: #4DAD8C;
+
+.trainbar-div{
+    background-color: #1CA917;
+    
     height: 100%;
+    width: 10px;
+
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: visible;
+    z-index: 0;
 }
 
-.sidebar-front-div{
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    
+
+.trainbar-stop
+{
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers the SVG */
+
+    width: 40px;   /* allow it to be bigger than container */
+    height: 40pxs;
+    pointer-events: none; /* lets clicks pass through to content if needed */
+    z-index: 1;    /* optional: layer it above content */
 }
 
-.sidebar-back-div{
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    
 
+.trainbar-stop-icon
+{
+    fill: black;
+    transition: fill 200ms ease;
+}
+
+.trainbar-stop-icon-active
+{
+    fill:  #fcd34d;
+
+}
+
+.trainbar-item:hover p
+{
+    color: #FFD166; 
 }
