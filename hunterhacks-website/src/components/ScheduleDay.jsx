@@ -32,16 +32,17 @@ function ScheduleDay({activityArray})
                         activityArray.map((activity, index) => (
                             <div
                                 key={index}
-                                style={{display:'flex'}}
+                                style={{display:'flex', alignItems:'center', gap:'1.25rem'}}
                             >
                                 {index === 0 && (<img 
-                        src={HunterH}
-                        style={{height:'120px'}}
-                    ></img>)}
+                                    src={HunterH}
+                                    alt="H"
+                                    style={{height:'120px'}}
+                                ></img>)}
 
                                 <Activity
                                     activityTitle={activity.activityTitle}
-                                    activityDescription={activity.activityTitle}
+                                    activityDescription={activity.activityDescription}
                                 ></Activity>
                             </div>
                         ))
