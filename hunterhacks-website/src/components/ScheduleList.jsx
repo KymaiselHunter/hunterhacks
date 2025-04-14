@@ -1,4 +1,5 @@
 import ScheduleDay from "./ScheduleDay";
+import "./ScheduleList.css"
 
 const activitiesFriday = [
     {
@@ -71,7 +72,7 @@ const activitiesSunday = [
 function ScheduleList()
 {
     return(
-        <>
+        <div className="schedule-list">
             <ScheduleDay
                 activityArray={activitiesFriday}
             ></ScheduleDay>
@@ -81,6 +82,6 @@ function ScheduleList()
             <ScheduleDay
                 activityArray={activitiesSunday}
             ></ScheduleDay>
-        </>
+        </div>
     );
 }export default ScheduleList
