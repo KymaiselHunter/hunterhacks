@@ -8,6 +8,8 @@ import Navbar from './components/Navbar'
 // import FAQ from './components/FAQ'
 import FAQHolder from './components/FAQHolder';
 
+import ScheduleList from './components/ScheduleList';
+
 // Section is important as this is how navigation knows
 // where everything is, as well as a way to organize
 // each section into its own component
@@ -119,6 +121,7 @@ function App() {
 				title="Hackathon Schedule:"
 				ref={scheduleRef}
 				>
+					<ScheduleList></ScheduleList>
 				</Section>
 				
 				<Section
