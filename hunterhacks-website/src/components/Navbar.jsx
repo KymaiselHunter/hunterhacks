@@ -16,14 +16,19 @@ function Navbar({
 {
     const sidebarRef = useRef(null); 
 
+    const sidebarIconRefs = useRef([]);
+
+    const trainbarIconRefs = useRef([]);
+    const trainbarTrailRefs = useRef([]);
+
     // function to handle scrolling on page
     // used for navbar decoration and closing the sidebar
     const handleScroll = () => {
         // check if each section has been passed, if so, decorate it in nav/side
         sectionArray.forEach((section, index) => {
             const rect = section.sectionRef.current?.getBoundingClientRect();
-            const trainbarCircle = document.querySelector(`.trainbar-stop-icon[data-index="${index}"]`);
-            const sidebarCircle = document.querySelector(`.sidebar-stop-icon[data-index="${index}"]`);
+            const trainbarCircle = trainbarIconRefs.current[index].querySelector('circle');
+            const sidebarCircle = sidebarIconRefs.current[index];
             
             if (rect?.top < 100) {
                 trainbarCircle?.classList.add('trainbar-stop-icon-active');
@@ -43,6 +48,30 @@ function Navbar({
     // use effect to enable the scrolling listener once the page is loaded
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+
+        // check if each section has been passed, if so, decorate it in nav/side
+        trainbarIconRefs.current.forEach((icon, index) => {
+            // reset first
+            icon.style.left = `${0}px`;
+            
+            const trail = trainbarTrailRefs.current[index];
+
+            const trailRect = trail.getBoundingClientRect();
+            const iconRect = icon.getBoundingClientRect();
+
+            const trailCenterX = trailRect.left + trailRect.width / 2;
+            const iconCenterX = iconRect.left + iconRect.width / 2;
+
+            const offsetLeft = trailCenterX - iconCenterX;
+            console.log(offsetLeft)
+
+            // Now move source to that position
+
+            // icon.style.left = `${500}px`;
+            icon.style.left = `${offsetLeft}px`;
+        });
+        
+
         return () => window.removeEventListener('scroll', handleScroll);
     },[]);
 
@@ -81,7 +110,7 @@ function Navbar({
                         >
                             <svg viewBox="0 0 12 12" width="11" height="11">
                             <circle 
-                                data-index={index}
+                                ref={(el) => sidebarIconRefs.current[index] = el}
                                 className="sidebar-stop-icon" 
                                 cx="6" cy="6" r="5"  />
                             </svg>
@@ -99,47 +128,46 @@ function Navbar({
 
             {/* navigation for big screens */}
             <nav className="trainbar">
-            {
-                // loop to make each navigational item (dynamic)
-                sectionArray.map((section, index) => (
-                    <a 
-                        className="trainbar-item"
-                        key={index}
-                        onClick={() => scrollFunction(section.sectionRef)}
-                    >
-                        <div
-                        className={[
-                            'trainbar-div',
-                            index === 0 && 'trainbar-front-div',
-                            index === sectionArray.length - 1 && 'trainbar-back-div'
-                        ].filter(Boolean).join(' ')}
+                <p className='trainbar-header'>
+                    STOPS
+                </p>
+                {
+                    // loop to make each navigational item (dynamic)
+                    sectionArray.map((section, index) => (
+                        <a 
+                            className="trainbar-item"
+                            key={index}
+                            onClick={() => scrollFunction(section.sectionRef)}
                         >
-                            {/* <svg viewBox="0 0 12 12" width="11" height="11">
-                            <circle 
-                                data-index={index}
-                                className="trainbar-stop-icon" 
-                                cx="6" cy="6" r="5"  />
-                            </svg> */}
+                            <div
+                                ref={(el) => trainbarTrailRefs.current[index] = el}
+                                className={[
+                                    'trainbar-div',
+                                    index === 0 && 'trainbar-front-div',
+                                    index === sectionArray.length - 1 && 'trainbar-back-div'
+                                ].filter(Boolean).join(' ')}
+                                ></div>
 
                             <svg 
-                            width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            className="trainbar-stop"
-                            >
-                            <circle 
-                            cx="10.5" cy="10.5" r="9" 
-                            data-index={index}
-                            className="trainbar-stop-icon" // fill="black" 
-                            stroke="white" strokeWidth="3"/>
+                                width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                className="trainbar-stop"
+                                    ref={(el) => trainbarIconRefs.current[index] = el}
+                                >
+                                <circle 
+                                    cx="10.5" cy="10.5" r="9" 
+                                    // data-index={index}
+
+                                    className="trainbar-stop-icon" // fill="black" 
+                                    stroke="white" strokeWidth="3"/>
                             </svg> 
-                        </div>
 
-                        <p style={{padding:"0rem .5rem"}}>
-                            {section.sectionName}
-                        </p>
+                            <p style={{padding:"0rem .5rem"}}>
+                                {section.sectionName}
+                            </p>
 
-                    </a>
-                ))
-            }
+                        </a>
+                    ))
+                }
             </nav>
         </>
     );

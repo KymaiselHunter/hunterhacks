@@ -41,7 +41,7 @@ function App() {
 	const sectionArray = useRef([
 		{ sectionName: 'About', sectionRef: aboutRef },
 		{ sectionName: 'Sponsors', sectionRef: sponsorRef },
-		{ sectionName: 'Judges', sectionRef: judgeRef },
+		{ sectionName: 'Judges & Sponsors', sectionRef: judgeRef },
 		{ sectionName: 'Schedule', sectionRef: scheduleRef },
 		{ sectionName: 'Tracks', sectionRef: trackRef },
 		{ sectionName: 'Apply!', sectionRef: applicationRef },
