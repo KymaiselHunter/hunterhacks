@@ -87,10 +87,14 @@ button:focus-visible {
 
 /* More padding on larger screens */
 @media (min-width: 640px) {
-  .responsive-container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+	.All{
+		display: flex;
+	}
+
+	.responsive-container {
+    	padding-left: 2rem;
+    	padding-right: 2rem;
+  	}		
 }
 @media (min-width: 768px) {
   .responsive-container {
