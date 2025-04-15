@@ -16,8 +16,45 @@ import img2 from './assets/placeholder2.jpg';
 import img3 from './assets/placeholder3.jpeg';
 import img4 from './assets/placeholder4.jpg';
 
+import Abby from './assets/Abby.jpg';
+import Ahmed from './assets/Ahmed.jpg';
+import Isabella from './assets/Isabella.jpg';
+import Justin from './assets/Justin.jpg';
+import Kevin from './assets/Kevin.jpg';
+import Leyla from './assets/Leyla.jpg';
+import Melissa from './assets/Melissa.jpg';
+import Susan from './assets/Susan.jpg';
+
 
 import PictureBoard from './components/PictureBoard'
+
+// =========================
+// // picture board prop stuff
+// const judgeProfiles = [
+// 	{src: img1, name:'placeholder1'},
+// 	{src: img2, name:'placeholder2'},
+// 	{src: img3, name:'placeholder3'},
+// 	{src: img4, name:'Batman'},
+// 	{src: img3, name:'placeholder3'},
+// 	{src: img2, name:'placeholder2'},
+// 	{src: img1, name:'placeholder1'},
+// 	{src: img2, name:'placeholder2'},
+// 	{src: img3, name:'placeholder3'},
+// 	{src: img4, name:'Batman'},
+// 	{src: img3, name:'placeholder3'},
+// 	{src: img2, name:'placeholder2'},
+// ];
+// picture board prop stuff
+const judgeProfiles = [
+	{ src: Abby, name: 'Abby' },
+	{ src: Ahmed, name: 'Ahmed' },
+	{ src: Isabella, name: 'Isabella' },
+	{ src: Justin, name: 'Justin' },
+	{ src: Kevin, name: 'Kevin' },
+	{ src: Leyla, name: 'Leyla' },
+	{ src: Melissa, name: 'Melissa' },
+	{ src: Susan, name: 'Susan' },
+];
 
 // Section is important as this is how navigation knows
 // where everything is, as well as a way to organize
@@ -59,22 +96,7 @@ function App() {
 		{ sectionName: 'FAQ', sectionRef: faqRef },
 	]);
 
-	// =========================
-	// picture board prop stuff
-	const judgeProfiles = [
-		{src: img1, name:'placeholder1'},
-		{src: img2, name:'placeholder2'},
-		{src: img3, name:'placeholder3'},
-		{src: img4, name:'Batman'},
-		{src: img3, name:'placeholder3'},
-		{src: img2, name:'placeholder2'},
-		{src: img1, name:'placeholder1'},
-		{src: img2, name:'placeholder2'},
-		{src: img3, name:'placeholder3'},
-		{src: img4, name:'Batman'},
-		{src: img3, name:'placeholder3'},
-		{src: img2, name:'placeholder2'},
-	];
+	
 	
 	return (
 		<div
