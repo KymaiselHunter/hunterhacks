@@ -1,0 +1,19 @@
+.schedule-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px 15px;
+}
+
+@media (min-width: 640px)
+{
+    .schedule-list{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .schedule-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
