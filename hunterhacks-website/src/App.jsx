@@ -79,8 +79,11 @@ function App() {
 	const scrollToRef = (ref) => {
 		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	
-		ref.current?.scrollIntoView({
-		behavior: prefersReducedMotion ? 'auto' : 'smooth',
+		const top = ref.current.offsetTop;
+
+		window.scrollTo({
+			top: top,
+			behavior: prefersReducedMotion ? 'auto' : 'smooth',
 		});
 	};
 	
