@@ -23,7 +23,7 @@
     padding: 15px;
     font-family: 'Pixelify Sans';
     height: 20vh;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .title{
