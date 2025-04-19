@@ -28,7 +28,7 @@
 }
 
 .picture-board-image:hover{
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     transform: scale(1.02);
     
 }
@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     gap: 2rem;
 
     opacity: 0;
@@ -58,4 +59,9 @@
 
 .picture-board-caption:hover{
     opacity: 1;
+    background: linear-gradient(180deg, rgba(21,22,24,.24) 0%, #151618 100%);
+}
+
+.picture-board-caption-name{
+    width: fit-content;
 }

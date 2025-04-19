@@ -120,11 +120,11 @@ function PictureBoard({profileArray})
                             <img
                                     
                                     src={profile.src}
-                                    alt="whattttt"
+                                    alt={profile.name}
                                 ></img>
 
                             <figcaption className='picture-board-caption'>
-                                <h3>
+                                <h3 className='picture-board-caption-name'>
                                     {profile.name}
                                 </h3>
                             </figcaption>

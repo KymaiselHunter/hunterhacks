@@ -19,6 +19,12 @@
     color: #FFD166; 
 }
 
+.question-container h3{
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 25px;
+
+}
+
 /* Made this wrapper so I can use variables for the close and open time */
 .faq-wrapper {
     --faq-open-time: 600ms;

@@ -1,0 +1,65 @@
+.track_container{
+    height: fit-content;
+    width: 80%;
+    background-color: rgb(17, 23, 41);
+    margin: 25px;
+    padding: 15px;
+    align-items: center;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 94px 1fr;
+    gap: 25px;
+}
+
+.title_container{
+    padding: 15px;
+    font-family: 'Pixelify Sans';
+    height: fit-content;
+    grid-column: span 2; 
+
+    /* overflow: hidden; */
+}
+
+@media (min-width:274px){
+    .track_container{
+        grid-template-columns: 94fr 180fr;
+    }
+
+
+
+}
+@media (min-width:1200px){
+    .track_container{
+        grid-template-columns: 94px 180px 1fr;
+    }
+
+    .title_container{
+        grid-column:3/span 1; 
+
+    }
+
+}
+
+.bird_container{
+    display: flex;
+    /* padding: 25px; */
+}
+
+.bird_img{
+    height: auto;
+    width: 175px;
+}
+
+.track_img{
+    width: 94px;
+}
+
+
+.title{
+    font-size: 30px;
+}
+
+.subtitle{
+    font-size: 18px;
+}

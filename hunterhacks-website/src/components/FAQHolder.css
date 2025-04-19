@@ -3,9 +3,17 @@
     flex-direction: column;
 }
 
-@media (min-width: 900px) { 
+@media (min-width: 1200px) { 
     .faq-holder{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        
+        gap: 3rem;
+        /* padding: 0rem .15rem; */
+    }
+}
+@media (min-width: 1400px) { 
+    .faq-holder{
+        gap:6rem
     }
 }

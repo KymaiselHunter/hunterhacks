@@ -37,3 +37,9 @@
       transform: none;
     }
   }
+
+
+.section-header{
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 30px;
+}

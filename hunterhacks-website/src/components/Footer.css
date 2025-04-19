@@ -1,0 +1,23 @@
+.footer{
+    margin: 2rem 0rem;
+    width: clamp(300px, 100%, 100%);
+
+    border-top: 3px solid #D9D9D9;
+
+    padding: .5rem;
+    
+}
+
+.footer-text,
+.footer-header{
+    font-family: 'Pixelify Sans', cursive;
+    margin: 0px;
+}
+
+.footer-text{
+    font-size: 15px;
+}
+
+.footer-header{
+    font-size: 23px;
+}

@@ -8,6 +8,9 @@ import Navbar from './components/Navbar'
 // import FAQ from './components/FAQ'
 import FAQHolder from './components/FAQHolder';
 
+import Footer from './components/Footer';
+
+import Tracks from './components/Tracks'
 import ScheduleList from './components/ScheduleList';
 
 // Imports for picture board
@@ -16,7 +19,7 @@ import img2 from './assets/placeholder2.jpg';
 import img3 from './assets/placeholder3.jpeg';
 import img4 from './assets/placeholder4.jpg';
 
-import Abby from './assets/Abby.jpg';
+import Abbe from './assets/Abbe.jpg';
 import Ahmed from './assets/Ahmed.jpg';
 import Isabella from './assets/Isabella.jpg';
 import Justin from './assets/Justin.jpg';
@@ -46,14 +49,14 @@ import PictureBoard from './components/PictureBoard'
 // ];
 // picture board prop stuff
 const judgeProfiles = [
-	{ src: Abby, name: 'Abby' },
-	{ src: Ahmed, name: 'Ahmed' },
-	{ src: Isabella, name: 'Isabella' },
-	{ src: Justin, name: 'Justin' },
-	{ src: Kevin, name: 'Kevin' },
-	{ src: Leyla, name: 'Leyla' },
-	{ src: Melissa, name: 'Melissa' },
-	{ src: Susan, name: 'Susan' },
+	{ src: Abbe, name: 'Abbe Tse' },
+	{ src: Ahmed, name: 'Ahmed Alsubai' },
+	{ src: Isabella , name: 'Isabella Abonitalla' },
+	{ src: Justin, name: 'Justin Tojeira' },
+	{ src: Kevin, name: 'Kevin Granados' },
+	{ src: Leyla, name: 'Leyla Tuon Cao' },
+	{ src: Melissa, name: 'Melissa Lynch' },
+	{ src: Susan, name: 'Susan Sun' },
 ];
 
 // Section is important as this is how navigation knows
@@ -63,6 +66,9 @@ const judgeProfiles = [
 // all section content should be a child, while it's header
 // and reference should be passed as components
 import Section from './components/Section'
+import About from './components/About'
+
+import Sponsors from './components/Sponsors';
 
 function App() {
 	// references for each section
@@ -71,7 +77,6 @@ function App() {
 	const judgeRef = useRef(null);
 	const scheduleRef = useRef(null);
 	const trackRef = useRef(null);
-	const applicationRef = useRef(null);
 	const faqRef = useRef(null);
 
 	// function to scroll to each section, 
@@ -91,15 +96,16 @@ function App() {
 	// to navigation component dynamically
 	const sectionArray = useRef([
 		{ sectionName: 'About', sectionRef: aboutRef },
+		{ sectionName: 'Judges', sectionRef: judgeRef },
 		{ sectionName: 'Sponsors', sectionRef: sponsorRef },
-		{ sectionName: 'Judges & Sponsors', sectionRef: judgeRef },
 		{ sectionName: 'Schedule', sectionRef: scheduleRef },
 		{ sectionName: 'Tracks', sectionRef: trackRef },
-		{ sectionName: 'Apply!', sectionRef: applicationRef },
 		{ sectionName: 'FAQ', sectionRef: faqRef },
 	]);
 
-	
+
+	const footerRef = useRef(null);
+
 	
 	return (
 		<div
@@ -124,53 +130,30 @@ function App() {
 				and a header
 			*/}
 			<main className="responsive-container">
-				<h1>HunterHacks</h1>
+				{/* <h1>HunterHacks</h1> */}
 
 				<Section
-				title="About this Hackathon:"
+				title=""
 				ref={aboutRef}
 				>
-					<p>
-						HunterHacks is Hunter College’s premier student-led hackathon, dedicated to empowering students to use technology for social wellness and community impact. We believe that innovation thrives when diverse minds come together to solve real-world problems, and at HunterHacks, we’re here to make that happen—one hack at a time.
-						Hackathons aren’t just about coding. They’re about collaborating, learning, and building. Whether you’re an experienced hacker, an aspiring designer, or just tech-curious, HunterHacks is the perfect space to experiment with new ideas, connect with like-minded individuals, and push the boundaries of what technology can do for mental health, community well-being, and social change. ?? - is this too specific?
-						This year, participants will form teams, develop innovative projects, and present their work to a panel of judges for a chance to win prizes. But beyond the competition, HunterHacks is about learning and growing. We’ll have workshops, mentorship, and networking opportunities to help you hone your skills and bring your ideas to life.
-						Join us for a weekend of hacking, creativity, and collaboration as we take flight, building innovative solutions that make a real impact.
-
-					</p>
+					<About></About>
 				</Section>
 
 				<Section
-				title="Sponsors + Images:"
-				ref={sponsorRef}
-				>
-					<p>
-						Logo
-						Short description
-						Sponsor benefits?
-						
-						Suggestions:
-						Should it be a carousel slider? Automatically slide to next sponsor every five seconds?
-						Hover Effect: When users hover over a logo, short description appears?
-					</p>
-				</Section>
-
-
-
-				<Section
-				title="Judges + Images:"
+				title="Judges"
 				ref={judgeRef}
 				>
-					<p>
-						Photo & Bio - Background/expertise, perhaps a fun fact or is that corny?, LinkedIn
-						
-						Suggestions:
-						Grid Layout with Headshots: Click-to-expand bios?
-						Flexbox it up
-					</p>
 					<PictureBoard
 						profileArray={judgeProfiles}
 					>
 					</PictureBoard>
+				</Section>
+			
+				<Section
+				title="Proudly Sponsored By: "
+				ref={sponsorRef}
+				>
+					<Sponsors></Sponsors>
 				</Section>
 
 				<Section
@@ -181,20 +164,18 @@ function App() {
 				</Section>
 				
 				<Section
-				title="Tracks (no prizes until actual hackathon):"
+				title=""
 				ref={trackRef}
 				>
-				</Section>
-						
-				
-				<Section
-				title="Link to Hackathon Application:"
-				ref={applicationRef}
-				>
+					<Tracks></Tracks>
 				</Section>
 				
 				<Section title="Frequently Asked Questions:" ref={faqRef}>
 					<FAQHolder/>
+				</Section>
+
+				<Section title="" ref={footerRef}>
+					<Footer></Footer>
 				</Section>
 
 			</main>
