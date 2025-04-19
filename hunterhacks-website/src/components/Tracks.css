@@ -1,0 +1,35 @@
+.track_container{
+    height: 24vh;
+    width: 75vw;
+    background-color: rgb(17, 23, 41);
+    margin: 25px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.bird_container{
+    display: flex;
+    padding: 25px;
+}
+
+.bird_img{
+    height: 175px;
+    width: auto;
+}
+
+.title_container{
+    padding: 15px;
+    font-family: 'Pixelify Sans';
+    height: 20vh;
+    overflow: scroll;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.subtitle{
+    font-size: 18px;
+}

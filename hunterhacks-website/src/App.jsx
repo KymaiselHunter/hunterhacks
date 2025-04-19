@@ -10,6 +10,7 @@ import FAQHolder from './components/FAQHolder';
 
 import Footer from './components/Footer';
 
+import Tracks from './components/Tracks'
 import ScheduleList from './components/ScheduleList';
 
 // Imports for picture board
@@ -170,9 +171,10 @@ function App() {
 				</Section>
 				
 				<Section
-				title="Tracks (no prizes until actual hackathon):"
+				title=""
 				ref={trackRef}
 				>
+					<Tracks></Tracks>
 				</Section>
 				
 				<Section title="Frequently Asked Questions:" ref={faqRef}>
