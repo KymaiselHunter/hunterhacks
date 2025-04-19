@@ -3,67 +3,67 @@ import "./ScheduleList.css";
 
 const activitiesFriday = [
   {
-    activityTitle: "Check-in Begins",
+    activityTitle: "Check-in Begins ✅",
     activityDescription: "1PM – Hunter West Lobby",
   },
   {
-    activityTitle: "Opening Ceremony",
+    activityTitle: "Opening Ceremony 🎙️",
     activityDescription: "2PM – Hunter West Lobby",
   },
   {
-    activityTitle: "MLT Introduction",
+    activityTitle: "MLT Introduction 📎",
     activityDescription: "2:30PM – Hunter West Auditorium",
   },
   {
-    activityTitle: "Check-in Ends, Team Registration + Mentor Matching",
+    activityTitle: "Check-in Ends, Team Registration + Mentor Matching 🙋‍♀️",
     activityDescription: "3PM – Hunter West Auditorium → Hunter East Library",
   },
   {
-    activityTitle: "In-Person Hacking Ends",
+    activityTitle: "In-Person Hacking Ends 📌",
     activityDescription: "9PM – Hunter East Library",
   },
 ];
 const activitiesSaturday = [
   {
-    activityTitle: "Breakfast",
+    activityTitle: "Breakfast 🍳",
     activityDescription: "10AM – Hunter West Cafeteria",
   },
   {
-    activityTitle: "Lunch",
-    activityDescription: "1PM – Hunter West Cafeteria",
+    activityTitle: "In-Person Hacking Begins ✅",
+    activityDescription: "11AM – Hunter East Library",
   },
   {
-    activityTitle: "TBD!",
-    activityDescription: "2:30PM – Hunter East 708 (Hemmerdinger Room)",
+    activityTitle: "Codepath Workshop 💻, Hybrid",
+    activityDescription: "12PM – TBD",
   },
   {
-    activityTitle: "TBD!",
-    activityDescription: "3PM – Hunter East 708 (Hemmerdinger Room)",
+    activityTitle: "LinkedIn Workshop 🤝",
+    activityDescription: "2:30PM – Hunter West Auditorium",
   },
   {
-    activityTitle: "In-Person Hacking Ends",
-    activityDescription: "9PM – Hunter East Library + Hunter West Cafeteria",
+    activityTitle: "In-Person Hacking Ends 📌",
+    activityDescription: "9PM – Hunter East Library",
   },
 ];
 const activitiesSunday = [
   {
-    activityTitle: "Breakfast",
+    activityTitle: "Breakfast 🍳",
     activityDescription: "10AM – Hunter West Cafeteria",
   },
   {
-    activityTitle: "Hacking Ends, Lunch Begins",
+    activityTitle: "Hacking Ends + Lunch 🥪",
     activityDescription: "12PM – Hunter West Cafeteria",
   },
   {
-    activityTitle: "Judging Begins",
+    activityTitle: "Judging Begins 🏆",
     activityDescription: "1PM – Hunter West Cafeteria",
   },
   {
-    activityTitle: "Judging Ends",
+    activityTitle: "Judging Ends 🛑",
     activityDescription: "3PM – Hunter West Cafeteria",
   },
   {
-    activityTitle: "Closing Ceremony",
+    activityTitle: "Closing Ceremony 🎊",
     activityDescription: "4PM - Hunter West 714",
   },
 ];

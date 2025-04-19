@@ -1,3 +1,23 @@
+.questions{
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+.img-holder{
+    display: flex;
+    align-items: center;
+}
+
+.q-text{
+    font-family: 'Pixelify Sans';
+    font-size: 22px;
+    width: 50vw;
+    padding: 25px;
+}
 .footer{
     margin: 2rem 0rem;
     width: clamp(300px, 100%, 100%);
@@ -15,9 +35,9 @@
 }
 
 .footer-text{
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .footer-header{
-    font-size: 23px;
+    font-size: 25px;
 }
