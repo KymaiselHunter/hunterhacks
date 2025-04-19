@@ -128,7 +128,7 @@ function App() {
 				and a header
 			*/}
 			<main className="responsive-container">
-				<h1>HunterHacks</h1>
+				{/* <h1>HunterHacks</h1> */}
 
 				<Section
 				title=""

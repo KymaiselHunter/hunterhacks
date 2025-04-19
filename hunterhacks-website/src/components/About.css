@@ -1,5 +1,5 @@
 .hunterhacks{
-    padding: 50px;
+    padding: 0px;
 }
 
 .hh_title{
@@ -11,8 +11,10 @@
 
 
 .hh_subtitle{
-    display: flex;
-    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+    /* padding: 0px; */
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -20,11 +22,46 @@
 }
 
 .hh_text{
-    width: 50%;
-    padding-right: 50px;
+    width: 100%;
+    
     font-family: 'Pixelify Sans', cursive;
-    font-size: 25px;
+    font-size: 18px;
 }
+
+@media (min-width: 640px)
+{
+    .hh_text{
+        font-size: 20px;
+    }
+    .hh_subtitle{
+        padding: 50px;
+
+    }
+    
+}
+@media (min-width: 1300px)
+{
+    .hh_text{
+        font-size: 25px;
+    }
+    .hh_subtitle{
+        padding: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+@media (min-width: 1800px)
+{
+    .hh_text{
+        font-size: 25px;
+    }
+    .hh_subtitle{
+        padding: 50px 200px;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
 
 .subtitle_item{
     display: grid;
