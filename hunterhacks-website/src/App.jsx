@@ -7,7 +7,7 @@ import { useRef } from 'react'
 import Navbar from './components/Navbar'
 // import FAQ from './components/FAQ'
 import FAQHolder from './components/FAQHolder';
-
+import Tracks from './components/Tracks'
 import ScheduleList from './components/ScheduleList';
 
 // Imports for picture board
@@ -177,9 +177,10 @@ function App() {
 				</Section>
 				
 				<Section
-				title="Tracks (no prizes until actual hackathon):"
+				title=""
 				ref={trackRef}
 				>
+					<Tracks></Tracks>
 				</Section>
 						
 				
