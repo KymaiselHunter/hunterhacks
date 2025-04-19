@@ -1,13 +1,13 @@
 import "./Sponsors.css";
 
-import Codepath from "../assets/sponsors/codepath.png";
-import MLT from "../assets/sponsors/mlt.png";
-import Bloomberg from "../assets/sponsors/bloomberg.png";
-import Hunter from "../assets/sponsors/usg.jpg";
 import IBM from "../assets/sponsors/ibm.jpg";
 import Redbull from "../assets/sponsors/redbull.png";
 import Microsoft from "../assets/sponsors/microsoft.png";
 import Simplify from "../assets/sponsors/simplify1.png";
+import Codepath from '../assets/sponsors/codepath.png';
+import MLT from '../assets/sponsors/mlt.png';
+import Bloomberg from '../assets/sponsors/bloomberg.png';
+import Hunter from '../assets/sponsors/hunter.png'
 
 function Sponsors() {
   return (
