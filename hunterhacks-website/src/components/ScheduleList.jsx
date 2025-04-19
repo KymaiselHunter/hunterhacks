@@ -33,16 +33,16 @@ const activitiesSaturday = [
     activityDescription: "1PM – Hunter West Cafeteria",
   },
   {
-    activityTitle: "MLT Introduction",
-    activityDescription: "2:30PM – Hunter West Auditorium",
+    activityTitle: "TBD!",
+    activityDescription: "2:30PM – Hunter East 708 (Hemmerdinger Room)",
   },
   {
-    activityTitle: "Check-in Ends, Team Registration + Mentor Matching",
-    activityDescription: "3PM – Hunter West Auditorium → Hunter East Library",
+    activityTitle: "TBD!",
+    activityDescription: "3PM – Hunter East 708 (Hemmerdinger Room)",
   },
   {
     activityTitle: "In-Person Hacking Ends",
-    activityDescription: "9PM – Hunter East Library",
+    activityDescription: "9PM – Hunter East Library + Hunter West Cafeteria",
   },
 ];
 const activitiesSunday = [

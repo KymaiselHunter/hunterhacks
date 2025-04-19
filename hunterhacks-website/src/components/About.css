@@ -1,139 +1,127 @@
-.hunterhacks{
-    padding: 0px;
-    max-width: 100%;
+.hunterhacks {
+  padding: 0px;
+  max-width: 100%;
 }
 
-.hh_title{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
+.hh_title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
 }
 
-
-.hh_subtitle{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-top: 30px;
-    /* padding: 50px; */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
+.hh_subtitle {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 30px;
+  /* padding: 50px; */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
-.hh_text{
-    width: 100%;
-    
-    font-family: 'Pixelify Sans', cursive;
-    font-size: clamp(1rem, 5vw, 1.5rem);
+.hh_text {
+  width: 100%;
 
+  font-family: "Pixelify Sans", cursive;
+  font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
-@media (min-width: 1300px)
-{
-    .hh_subtitle{
-        grid-template-columns: 1fr 1fr;
-        padding: 2rem;
-    }
-    
+@media (min-width: 1300px) {
+  .hh_subtitle {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
 }
 
-
-
-.subtitle_item{
-    display: grid;
-    align-items: center;
-    justify-items: center;
+.subtitle_item {
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
-.birds{
-    height: 15vh;
-    width: auto;
+.birds {
+  height: 15vh;
+  width: auto;
 }
 
-.button{
-    font-family: 'Pixelify Sans', cursive;
-    font-size: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    width: auto;
-    background-color: #1CA917;
-    color: white;
-    text-decoration: none;
-    padding: 5%;
-    border-radius: 15px;
-    margin-top: 50px;
+.button {
+  font-family: "Pixelify Sans", cursive;
+  font-size: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: auto;
+  background-color: #1ca917;
+  color: white;
+  text-decoration: none;
+  padding: 5%;
+  border-radius: 15px;
+  margin-top: 50px;
 }
 
 .button a {
-    text-decoration: none; 
-    color: inherit; 
-    transition: color 1s ease;
-  }
-  
-  .button:hover {
-    background-color: #ffffff;
-    color: black;
-    cursor: pointer;
-  }
-  
-  .button:hover a {
-    color: black; 
-  }
-
-
-
-
-
-
-.banner-back{
-    background-color: black;
-    height: clamp(100px,100%,330px);
-    width: clamp(100px,90%,100%px);
-
-    padding-top: 2em;
-    margin-top: 2px;
+  text-decoration: none;
+  color: inherit;
+  transition: color 1s ease;
 }
 
-.banner-content{
-    border-top: 6px solid #ffffff;
-    padding-top: 1.25em;
-    padding-left: 30px;
-    padding-bottom: 1rem;
+.button:hover {
+  background-color: #6c2cd3;
+  color: black;
+  cursor: pointer;
 }
 
-.banner-content h1{
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    font-size: clamp(1rem, 7vw, 95px);
-    font-weight: 780;
+.button:hover a {
+  color: black;
 }
 
-.banner-sub-div{
-    display: flex;
-    height: 9vw;
-    
-    margin-top: 1vw;
-    gap: 20px;
-}
-.banner-sub-div{
-    display: flex;
+.banner-back {
+  background-color: black;
+  height: clamp(100px, 100%, 330px);
+  width: clamp(100px, 90%, 100%px);
+
+  padding-top: 2em;
+  margin-top: 2px;
 }
 
-.banner-sub-div div p{
-    font-family: 'Pixelify Sans', cursive;
-    margin: 0px;
-    color: white;
-
+.banner-content {
+  border-top: 6px solid #ffffff;
+  padding-top: 1.25em;
+  padding-left: 30px;
+  padding-bottom: 1rem;
 }
 
-.banner-sub-div div p:nth-of-type(1){
-    font-size: clamp(1rem, 4vw, 50px);
+.banner-content h1 {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: clamp(1rem, 7vw, 95px);
+  font-weight: 780;
 }
-.banner-sub-div div p:nth-of-type(2){
-    font-size: clamp(1rem, 3.5vw, 50px);
+
+.banner-sub-div {
+  display: flex;
+  height: 9vw;
+
+  margin-top: 1vw;
+  gap: 20px;
+}
+.banner-sub-div {
+  display: flex;
+}
+
+.banner-sub-div div p {
+  font-family: "Pixelify Sans", cursive;
+  margin: 0px;
+  color: white;
+}
+
+.banner-sub-div div p:nth-of-type(1) {
+  font-size: clamp(1rem, 4vw, 50px);
+}
+.banner-sub-div div p:nth-of-type(2) {
+  font-size: clamp(1rem, 3.5vw, 50px);
 }
