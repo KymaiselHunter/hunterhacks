@@ -1,6 +1,6 @@
 .footer{
     margin: 2rem 0rem;
-    width: clamp(300px, 100%, 947px);
+    width: clamp(300px, 100%, 100%);
 
     border-top: 3px solid #D9D9D9;
 

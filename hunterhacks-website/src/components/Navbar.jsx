@@ -44,11 +44,7 @@ function Navbar({
 
         sidebarRef.current.classList.remove('reveal');
     };
-
-    // use effect to enable the scrolling listener once the page is loaded
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
+    const handleResize = () => {
         // check if each section has been passed, if so, decorate it in nav/side
         trainbarIconRefs.current.forEach((icon, index) => {
             // reset first
@@ -70,10 +66,21 @@ function Navbar({
             // icon.style.left = `${500}px`;
             icon.style.left = `${offsetLeft}px`;
         });
+    };
+
+
+    // use effect to enable the scrolling listener once the page is loaded
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
+
+        handleResize()
         
 
-        return () => window.removeEventListener('scroll', handleScroll);
-    },[]);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+        };    },[]);
 
     // returns two things
     // a navbar and a sidebar, only one should be

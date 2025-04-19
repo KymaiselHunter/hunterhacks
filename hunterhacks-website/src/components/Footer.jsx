@@ -19,7 +19,7 @@ function Footer(){
   Lead Developer: @Kyle Bautista<br />
   <br />
   And Additional Help From:<br />
-  @Yna @Maggie @Tahya @Fariha
+  @Ynalois Pangilinan @Maggie Ma @Tahya Mumtahi @Fariha Kha
                 </p>
             </div>
         </>

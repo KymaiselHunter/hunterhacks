@@ -43,12 +43,12 @@ function Section({title, ref, children})
 
     return(
         <div ref={elementRef} className="section">
-            <h2>
+            <h2 className='section-header'>
                 {title}
             </h2>
 
             
-                {children}
+            {children}
 
         </div>
     );
