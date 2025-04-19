@@ -1,13 +1,30 @@
 import ContactPanel from '../assets/ContactPanel.svg';
 
 import './Footer.css';
+import discord from '../assets/discord.png'
+import insta from '../assets/instaicon.png'
 
 
 function Footer(){
     return(
         <>
-            <img src={ContactPanel} alt='Got more questions? 
-            Email us at cunyhunterhacks@gmail.com or DM on Instagram!' ></img>
+            {/* <img src={ContactPanel} alt='Got more questions? 
+            Email us at cunyhunterhacks@gmail.com or DM on Instagram!' ></img> */}
+
+            <div className='questions'>
+            <div className='img-holder'>
+                <a href="https://discord.gg/DwY36uXC8E">
+                <img src={discord} style={{ width: "75px", height: "75px", objectFit: "contain" }} />
+                </a>
+                <a href="https://www.instagram.com/cunyhunterhacks/">
+                <img src={insta} style={{ width: "100px", height: "100px", objectFit: "contain" }} />
+                </a>
+            </div>
+            <p className='q-text'>
+                Got more questions? Email us at <a href="mailto:cunyhunterhacks@gmail.com">cunyhunterhacks@gmail.com</a>, in our Discord server, or DM on Instagram!
+            </p>
+            </div>
+
 
             <div className='footer'>
                 <h2 className='footer-header'>
