@@ -8,6 +8,8 @@ import Navbar from './components/Navbar'
 // import FAQ from './components/FAQ'
 import FAQHolder from './components/FAQHolder';
 
+import Footer from './components/Footer';
+
 import ScheduleList from './components/ScheduleList';
 
 // Imports for picture board
@@ -16,7 +18,7 @@ import img2 from './assets/placeholder2.jpg';
 import img3 from './assets/placeholder3.jpeg';
 import img4 from './assets/placeholder4.jpg';
 
-import Abby from './assets/Abby.jpg';
+import Abbe from './assets/Abbe.jpg';
 import Ahmed from './assets/Ahmed.jpg';
 import Isabella from './assets/Isabella.jpg';
 import Justin from './assets/Justin.jpg';
@@ -46,14 +48,14 @@ import PictureBoard from './components/PictureBoard'
 // ];
 // picture board prop stuff
 const judgeProfiles = [
-	{ src: Abby, name: 'Abby' },
-	{ src: Ahmed, name: 'Ahmed' },
-	{ src: Isabella, name: 'Isabella' },
-	{ src: Justin, name: 'Justin' },
-	{ src: Kevin, name: 'Kevin' },
-	{ src: Leyla, name: 'Leyla' },
-	{ src: Melissa, name: 'Melissa' },
-	{ src: Susan, name: 'Susan' },
+	{ src: Abbe, name: 'Abbe Tse' },
+	{ src: Ahmed, name: 'Ahmed Alsubai' },
+	{ src: Isabella , name: 'Isabella Abonitalla' },
+	{ src: Justin, name: 'Justin Tojeira' },
+	{ src: Kevin, name: 'Kevin Granados' },
+	{ src: Leyla, name: 'Leyla Tuon Cao' },
+	{ src: Melissa, name: 'Melissa Lynch' },
+	{ src: Susan, name: 'Susan Sun' },
 ];
 
 // Section is important as this is how navigation knows
@@ -71,7 +73,6 @@ function App() {
 	const judgeRef = useRef(null);
 	const scheduleRef = useRef(null);
 	const trackRef = useRef(null);
-	const applicationRef = useRef(null);
 	const faqRef = useRef(null);
 
 	// function to scroll to each section, 
@@ -91,15 +92,16 @@ function App() {
 	// to navigation component dynamically
 	const sectionArray = useRef([
 		{ sectionName: 'About', sectionRef: aboutRef },
+		{ sectionName: 'Judges', sectionRef: judgeRef },
 		{ sectionName: 'Sponsors', sectionRef: sponsorRef },
-		{ sectionName: 'Judges & Sponsors', sectionRef: judgeRef },
 		{ sectionName: 'Schedule', sectionRef: scheduleRef },
 		{ sectionName: 'Tracks', sectionRef: trackRef },
-		{ sectionName: 'Apply!', sectionRef: applicationRef },
 		{ sectionName: 'FAQ', sectionRef: faqRef },
 	]);
 
-	
+
+	const footerRef = useRef(null);
+
 	
 	return (
 		<div
@@ -140,6 +142,16 @@ function App() {
 				</Section>
 
 				<Section
+				title="Judges"
+				ref={judgeRef}
+				>
+					<PictureBoard
+						profileArray={judgeProfiles}
+					>
+					</PictureBoard>
+				</Section>
+			
+				<Section
 				title="Sponsors + Images:"
 				ref={sponsorRef}
 				>
@@ -154,25 +166,6 @@ function App() {
 					</p>
 				</Section>
 
-
-
-				<Section
-				title="Judges + Images:"
-				ref={judgeRef}
-				>
-					<p>
-						Photo & Bio - Background/expertise, perhaps a fun fact or is that corny?, LinkedIn
-						
-						Suggestions:
-						Grid Layout with Headshots: Click-to-expand bios?
-						Flexbox it up
-					</p>
-					<PictureBoard
-						profileArray={judgeProfiles}
-					>
-					</PictureBoard>
-				</Section>
-
 				<Section
 				title="Hackathon Schedule:"
 				ref={scheduleRef}
@@ -185,16 +178,13 @@ function App() {
 				ref={trackRef}
 				>
 				</Section>
-						
-				
-				<Section
-				title="Link to Hackathon Application:"
-				ref={applicationRef}
-				>
-				</Section>
 				
 				<Section title="Frequently Asked Questions:" ref={faqRef}>
 					<FAQHolder/>
+				</Section>
+
+				<Section title="" ref={footerRef}>
+					<Footer></Footer>
 				</Section>
 
 			</main>
