@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -8,7 +10,6 @@
 
   background-color: #330F80;
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,6 +17,10 @@
 
   overflow-x: hidden;
 
+}
+
+.pixelify {
+  font-family: 'Pixelify Sans', cursive;
 }
 
 * {

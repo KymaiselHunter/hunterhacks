@@ -1,0 +1,70 @@
+.hunterhacks{
+    padding: 50px;
+}
+
+.hh_title{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+
+.hh_subtitle{
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.hh_text{
+    width: 50%;
+    padding-right: 50px;
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 25px;
+}
+
+.subtitle_item{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.birds{
+    height: 15vh;
+    width: auto;
+}
+
+.button{
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: auto;
+    background-color: #1CA917;
+    color: white;
+    text-decoration: none;
+    padding: 5%;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.button a {
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 1s ease;
+  }
+  
+  .button:hover {
+    background-color: #ffffff;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .button:hover a {
+    color: black; 
+  }
