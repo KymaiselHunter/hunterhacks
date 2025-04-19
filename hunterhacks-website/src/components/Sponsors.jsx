@@ -3,7 +3,7 @@ import './Sponsors.css'
 import Codepath from '../assets/sponsors/codepath.png';
 import MLT from '../assets/sponsors/mlt.png';
 import Bloomberg from '../assets/sponsors/bloomberg.png';
-import Hunter from '../assets/sponsors/Hunter.png'
+import Hunter from '../assets/sponsors/hunter.png'
 
 import Redbull from '../assets/sponsors/redbull.webp'
 import Microsoft from '../assets/sponsors/microsoft.avif'

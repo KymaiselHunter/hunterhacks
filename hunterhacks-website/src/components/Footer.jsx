@@ -1,5 +1,3 @@
-import ContactPanel from '../assets/ContactPanel.svg';
-
 import './Footer.css';
 import discord from '../assets/discord.png'
 import insta from '../assets/instaicon.png'
