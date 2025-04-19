@@ -32,9 +32,10 @@ function Footer(){
                 Made with Love from the GWC Team:<br />
   Developer and Lead Designer: @Kelly Lin<br />
   Lead Developer: @Kyle Bautista<br />
+  Developer: @Ynalois Pangilinan<br />
   <br />
   And Additional Help From:<br />
-  @Ynalois Pangilinan @Maggie Ma @Tahya Mumtahi @Fariha Kha
+  @Maggie Ma @Tahya Mumtahi @Fariha Kha
                 </p>
             </div>
         </>
