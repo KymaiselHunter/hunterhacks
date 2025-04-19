@@ -47,9 +47,9 @@ function Section({title, ref, children})
                 {title}
             </h2>
 
-            <div>
+            
                 {children}
-            </div>
+
         </div>
     );
 } export default Section

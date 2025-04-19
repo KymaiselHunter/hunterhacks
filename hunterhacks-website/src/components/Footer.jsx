@@ -1,6 +1,6 @@
 import ContactPanel from '../assets/ContactPanel.svg';
 
-
+import './Footer.css';
 
 
 function Footer(){
@@ -10,8 +10,16 @@ function Footer(){
             Email us at cunyhunterhacks@gmail.com or DM on Instagram!' ></img>
 
             <div className='footer'>
-                <p>
-                    gdfs
+                <h2 className='footer-header'>
+                Copyright HunterHacks@ 2025
+                </h2>
+                <p className='footer-text'>
+                Made with Love from the GWC Team:<br />
+  Developer and Lead Designer: @Kelly Lin<br />
+  Lead Developer: @Kyle Bautista<br />
+  <br />
+  And Additional Help From:<br />
+  @Yna @Maggie @Tahya @Fariha
                 </p>
             </div>
         </>
