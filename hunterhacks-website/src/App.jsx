@@ -67,7 +67,8 @@ const judgeProfiles = [
 // and reference should be passed as components
 import Section from './components/Section'
 import About from './components/About'
-import FAQ from './components/FAQ'
+
+import Sponsors from './components/Sponsors';
 
 function App() {
 	// references for each section
@@ -149,18 +150,10 @@ function App() {
 				</Section>
 			
 				<Section
-				title="Sponsors + Images:"
+				title="Proudly Sponsored By: "
 				ref={sponsorRef}
 				>
-					<p>
-						Logo
-						Short description
-						Sponsor benefits?
-						
-						Suggestions:
-						Should it be a carousel slider? Automatically slide to next sponsor every five seconds?
-						Hover Effect: When users hover over a logo, short description appears?
-					</p>
+					<Sponsors></Sponsors>
 				</Section>
 
 				<Section
