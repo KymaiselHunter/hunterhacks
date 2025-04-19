@@ -77,16 +77,15 @@ function Track({imgTrack, imgBird, trackName, trackDescription})
 {
     return(
         <div className = 'track_container'>
-            <img src={imgTrack}></img>
+            <img src={imgTrack} className='track_img'></img>
 
-            <div className='bird_container'>
-                <img className='bird_img' src={imgBird}></img>
-                
-                <div className='title_container'>
-                    <div className ='title'>{trackName}</div>
-                    <div className ='subtitle'>{trackDescription}</div>
-                </div>
+            <img className='bird_img' src={imgBird}></img>
+
+            <div className='title_container'>
+                <div className ='title'>{trackName}</div>
+                <div className ='subtitle'>{trackDescription}</div>
             </div>
+
         </div>
     )
 }
