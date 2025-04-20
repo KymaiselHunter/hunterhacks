@@ -17,10 +17,6 @@ import Tracks from "./components/Tracks";
 import ScheduleList from "./components/ScheduleList";
 
 // Imports for picture board
-import img1 from "./assets/placeholder1.jpg";
-import img2 from "./assets/placeholder2.jpg";
-import img3 from "./assets/placeholder3.jpeg";
-import img4 from "./assets/placeholder4.jpg";
 
 import Abbe from "./assets/Abbe.jpg";
 import Ahmed from "./assets/Ahmed.jpg";
@@ -35,20 +31,7 @@ import PictureBoard from "./components/PictureBoard";
 
 // =========================
 // // picture board prop stuff
-// const judgeProfiles = [
-// 	{src: img1, name:'placeholder1'},
-// 	{src: img2, name:'placeholder2'},
-// 	{src: img3, name:'placeholder3'},
-// 	{src: img4, name:'Batman'},
-// 	{src: img3, name:'placeholder3'},
-// 	{src: img2, name:'placeholder2'},
-// 	{src: img1, name:'placeholder1'},
-// 	{src: img2, name:'placeholder2'},
-// 	{src: img3, name:'placeholder3'},
-// 	{src: img4, name:'Batman'},
-// 	{src: img3, name:'placeholder3'},
-// 	{src: img2, name:'placeholder2'},
-// ];
+
 // picture board prop stuff
 const judgeProfiles = [
   { src: Abbe, name: "Abbe Tse", profession: "SWE @ IBM" },
@@ -63,6 +46,11 @@ const judgeProfiles = [
   { src: Leyla, name: "Leyla Tuon Cao", profession: "SWE @ Google" },
   { src: Melissa, name: "Melissa Lynch", profession: "Hunter CS Professor" },
   { src: Susan, name: "Susan Sun", profession: "Data Scientist @ UpKeepCare" },
+];
+const judgeBoardSizing = [
+  { breakpoint: -1, size: 2 },
+  { breakpoint: 950, size: 3 },
+  { breakpoint: 1200, size: 4 },
 ];
 
 // Section is important as this is how navigation knows
@@ -141,7 +129,10 @@ function App() {
         </Section>
 
         <Section title="Judges" ref={judgeRef}>
-          <PictureBoard profileArray={judgeProfiles}></PictureBoard>
+          <PictureBoard 
+          profileArray={judgeProfiles}
+          sizingArray={judgeBoardSizing}
+          ></PictureBoard>
         </Section>
 
         <Section title="Proudly Sponsored By: " ref={sponsorRef}>

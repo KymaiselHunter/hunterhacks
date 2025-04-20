@@ -2,11 +2,12 @@ import "./PictureBoard.css";
 
 import { useState, useEffect, useRef } from "react";
 
-function PictureBoard({ profileArray }) {
+function PictureBoard({ profileArray , sizingArray}) {
   const [imageMatrix, setImageMatrix] = useState([[]]);
   const sortedImageArray = useRef([]);
 
   const rowCount = useRef(3);
+  const sortedSizingArray = useRef([])
 
   useEffect(() => {
     console.log("profile array: ", profileArray);
@@ -17,14 +18,25 @@ function PictureBoard({ profileArray }) {
 
     initialUpdate();
 
+    // Sort by breakpoint ascending
+    sortedSizingArray.current = [...sizingArray].sort((a, b) => a.breakpoint - b.breakpoint);
+
     const updateLevel = () => {
       const width = window.innerWidth;
+      
+      if(sortedSizingArray.current.length <= 0) return;
 
-      let newRowCount = 0;
-      if (width >= 1024) newRowCount = 4;
-      // else if (width >= 768) newRowCount = 4;
-      // else if (width >= 640) newRowCount = 3;
-      else newRowCount = 3;
+      let newRowCount = sortedSizingArray.current[0].size;
+
+      for (let i = 1; i < sortedSizingArray.current.length; i++) {
+        const { breakpoint, size } = sortedSizingArray.current[i];
+        
+        if (width < breakpoint) {
+          break; // stop if it doesnt hit breakpoint
+        }
+
+        newRowCount = size;
+      }
 
       if (newRowCount !== rowCount.current) {
         rowCount.current = newRowCount;
