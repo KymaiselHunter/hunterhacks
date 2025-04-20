@@ -1,3 +1,6 @@
+// I want to see viewer count
+import { Analytics } from '@vercel/analytics/react'; 
+
 // Import useRefs to keep track of section components
 // Pass refs to navigation to scroll to them
 import { useRef } from "react";
@@ -161,6 +164,9 @@ function App() {
           <Footer></Footer>
         </Section>
       </main>
+
+      {/* I want to see viewer count */}
+      <Analytics/>
     </div>
   );
 }
