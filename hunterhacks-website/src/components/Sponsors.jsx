@@ -16,14 +16,14 @@ function Sponsors() {
         <img src={Codepath} alt="Codepath"></img>
         <img src={MLT} alt="MLT"></img>
         <img src={Bloomberg} alt="Bloomberg"></img>
-      </div>
-      <div className="sponsor-row">
-        <img src={IBM} alt="IBM"></img>
+      {/* </div>
+      <div className="sponsor-row"> */}
+        {/* <img src={IBM} alt="IBM"></img> */}
         <img src={Simplify} alt="Simplify"></img>
         <img src={Redbull} alt="Redbull"></img>
         <img src={Microsoft} alt="Microsoft"></img>
-      </div>
-      <div className="sponsor-row">
+      {/* </div>
+      <div className="sponsor-row"> */}
         <img src={Hunter} alt="Hunter"></img>
       </div>
     </>
