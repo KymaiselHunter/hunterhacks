@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./About.css";
 import banner from "../assets/banner.png";
-import birds from "../assets/birbs.png";
+import birds from "../assets/birbs2.png";
 import HunterH from "../assets/HunterH.svg";
 
 function About() {
