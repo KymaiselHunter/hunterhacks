@@ -32,7 +32,7 @@ function About() {
             USG
           </a>
           ,{" "}
-          <a href="https://www.instagram.com/hunterusg/" target="_blank">
+          <a href="https://www.instagram.com/gwchuntercollege" target="_blank">
             Girls Who Code
           </a>
           ,{" "}
