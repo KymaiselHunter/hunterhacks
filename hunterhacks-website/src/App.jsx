@@ -26,6 +26,7 @@ import Kevin from "./assets/Kevin.jpg";
 import Leyla from "./assets/Leyla.jpg";
 import Melissa from "./assets/Melissa.jpg";
 import Susan from "./assets/Susan.jpg";
+import Kareem from "./assets/Kareem.jpg"
 
 import PictureBoard from "./components/PictureBoard";
 
@@ -35,22 +36,39 @@ import PictureBoard from "./components/PictureBoard";
 // picture board prop stuff
 const judgeProfiles = [
   { src: Abbe, name: "Abby Tse", profession: "SWE @ IBM" },
-  { src: Ahmed, name: "Ahmed Alsubai", profession: "PM @ Capital One" },
+  { 
+    src: Ahmed, 
+    name: "Ahmed Alsubai", 
+    profession: "PM @ Capital One, Hunter Alum" 
+  },
   {
     src: Isabella,
     name: "Isabella Abonitalla",
     profession: "Prev. MLH Coach, Hunter Alum",
   },
   { src: Justin, name: "Justin Tojeira", profession: "Hunter CS Professor" },
-  { src: Kevin, name: "Kevin Granados", profession: "SWE @ Microsoft" },
-  { src: Leyla, name: "Leyla Tuon Cao", profession: "SWE @ Google" },
+  { 
+    src: Kevin, 
+    name: "Kevin Granados", 
+    profession: "SWE @ Microsoft, Hunter Alum" 
+  },
+  { 
+    src: Leyla, 
+    name: "Leyla Tuon Cao", 
+    profession: "SWE @ Google, Hunter Alum" 
+  },
   { src: Melissa, name: "Melissa Lynch", profession: "Hunter CS Professor" },
   { src: Susan, name: "Susan Sun", profession: "Data Scientist @ UpKeepCare" },
+  { src: Kareem, 
+    name: "Kareem Itani", 
+    profession: "SWE @ TD, Brooklyn College Alum" 
+  },
 ];
 const judgeBoardSizing = [
-  { breakpoint: -1, size: 2 },
-  { breakpoint: 950, size: 3 },
-  { breakpoint: 1200, size: 4 },
+  { breakpoint: -1, size: 1 },
+  { breakpoint: 800, size: 5 },
+  { breakpoint: 1301, size: 3 },
+  { breakpoint: 1917, size: 5 },
 ];
 
 // Section is important as this is how navigation knows

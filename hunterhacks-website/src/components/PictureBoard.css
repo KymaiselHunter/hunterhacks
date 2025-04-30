@@ -8,7 +8,8 @@
 }
 
 .picture-board-column {
-  width: calc(50% - 8px);
+  /* width: calc(50% - 8px); */
+  width: 300px;
 
   display: flex;
   flex-direction: column;
@@ -68,7 +69,7 @@
   font-size: 0.8rem;
 }
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   .picture-board-column {
     width: clamp(100px, 100%, 200px);
   }
@@ -77,4 +78,4 @@
   .picture-board-column {
     width: clamp(100px, 100%, 200px);
   }
-}
+} */
