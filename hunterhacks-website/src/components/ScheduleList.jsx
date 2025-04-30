@@ -11,12 +11,24 @@ const activitiesFriday = [
     activityDescription: "2PM – Hunter West Lobby",
   },
   {
-    activityTitle: "MLT Introduction 📎",
-    activityDescription: "2:30PM – Hunter West Auditorium",
+    activityTitle: "MLT Presentation 📎",
+    activityDescription: "3:00 PM – Hunter West Auditorium",
+  },
+  {
+    activityTitle: "HACKING STARTS 😈",
+    activityDescription: "3:30 PM",
+  },
+  {
+    activityTitle: "Product Thinking Workshop 🤔",
+    activityDescription: "4:00 PM",
   },
   {
     activityTitle: "Check-in Ends, Team Registration + Mentor Matching 🙋‍♀️",
-    activityDescription: "3PM – Hunter West Auditorium → Hunter East Library",
+    activityDescription: "5PM – Hunter West Auditorium → Hunter East Library",
+  },
+  {
+    activityTitle: "DINNER 🍕",
+    activityDescription: "6:00 PM",
   },
   {
     activityTitle: "In-Person Hacking Ends 📌",
@@ -25,20 +37,36 @@ const activitiesFriday = [
 ];
 const activitiesSaturday = [
   {
+    activityTitle: "IN-PERSON BEGINS 😳",
+    activityDescription: "10AM",
+  },
+  {
     activityTitle: "Breakfast 🍳",
     activityDescription: "10AM – Hunter West Cafeteria",
   },
+  //{
+  //  activityTitle: "In-Person Hacking Begins ✅",
+  //  activityDescription: "11AM – Hunter East Library",
+  //},
   {
-    activityTitle: "In-Person Hacking Begins ✅",
-    activityDescription: "11AM – Hunter East Library",
+    activityTitle: "Codepath Workshop 💻, Professional Development",
+    activityDescription: "12PM - HE 706 (Hemmerdinger room)",
   },
   {
-    activityTitle: "Codepath Workshop 💻, Hybrid",
-    activityDescription: "12PM – TBD",
+    activityTitle: "LUNCH",
+    activityDescription: "6:00 PM - Cafeteria",
+  },
+  {
+    activityTitle: "Cup Stacking 🥤",
+    activityDescription: "3:00 PM",
   },
   {
     activityTitle: "LinkedIn Workshop 🤝",
-    activityDescription: "2:30PM – Hunter West Auditorium",
+    activityDescription: "4:00PM – Hunter West Auditorium",
+  },
+  {
+    activityTitle: "Cloud Services/Hosting ☁️ Workshop",
+    activityDescription: "4:30PM - HE 706 (Hemmerdinger room)",
   },
   {
     activityTitle: "In-Person Hacking Ends 📌",
