@@ -34,7 +34,7 @@ import PictureBoard from "./components/PictureBoard";
 
 // picture board prop stuff
 const judgeProfiles = [
-  { src: Abbe, name: "Abbe Tse", profession: "SWE @ IBM" },
+  { src: Abbe, name: "Abby Tse", profession: "SWE @ IBM" },
   { src: Ahmed, name: "Ahmed Alsubai", profession: "PM @ Capital One" },
   {
     src: Isabella,
