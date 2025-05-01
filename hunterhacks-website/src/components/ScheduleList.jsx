@@ -4,11 +4,11 @@ import "./ScheduleList.css";
 const activitiesFriday = [
   {
     activityTitle: "Check-in Begins ✅",
-    activityDescription: "1PM – Hunter West Lobby",
+    activityDescription: "1:00 PM – Hunter West Lobby",
   },
   {
     activityTitle: "Opening Ceremony 🎙️",
-    activityDescription: "2PM – Hunter West Lobby",
+    activityDescription: "2:00 PM – Hunter West Lobby",
   },
   {
     activityTitle: "MLT Presentation 📎",
@@ -16,33 +16,33 @@ const activitiesFriday = [
   },
   {
     activityTitle: "HACKING STARTS 😈",
-    activityDescription: "3:30 PM",
+    activityDescription: "3:30 PM - Hunter West Lobby",
   },
   {
     activityTitle: "Product Thinking Workshop 🤔",
-    activityDescription: "4:00 PM",
+    activityDescription: "4:00 PM - Hunter West Lobby",
   },
   {
     activityTitle: "Check-in Ends, Team Registration + Mentor Matching 🙋‍♀️",
-    activityDescription: "5PM – Hunter West Auditorium → Hunter East Library",
+    activityDescription: "5:00PM – Hunter West Lobby",
   },
   {
     activityTitle: "DINNER 🍕",
-    activityDescription: "6:00 PM",
+    activityDescription: "6:00 PM - Hunter West Lobby",
   },
   {
     activityTitle: "In-Person Hacking Ends 📌",
-    activityDescription: "9PM – Hunter East Library",
+    activityDescription: "9:00 PM – Hunter East Library",
   },
 ];
 const activitiesSaturday = [
   {
     activityTitle: "IN-PERSON BEGINS 😳",
-    activityDescription: "10AM",
+    activityDescription: "10:00 AM",
   },
   {
     activityTitle: "Breakfast 🍳",
-    activityDescription: "10AM – Hunter West Cafeteria",
+    activityDescription: "10:00 AM – Hunter West Cafeteria",
   },
   //{
   //  activityTitle: "In-Person Hacking Begins ✅",
@@ -50,49 +50,49 @@ const activitiesSaturday = [
   //},
   {
     activityTitle: "Codepath Workshop 💻, Professional Development",
-    activityDescription: "12PM - HE 706 (Hemmerdinger room)",
+    activityDescription: "12:00PM - HE 706 (Hemmerdinger room)",
   },
   {
     activityTitle: "LUNCH",
-    activityDescription: "6:00 PM - Cafeteria",
+    activityDescription: "6:00 PM - Hunter West Cafeteria",
   },
   {
     activityTitle: "Cup Stacking 🥤",
-    activityDescription: "3:00 PM",
+    activityDescription: "3:00 PM - Hunter West Cafeteria",
   },
   {
     activityTitle: "LinkedIn Workshop 🤝",
-    activityDescription: "4:00PM – Hunter West Auditorium",
+    activityDescription: "4:00 PM – HE 706 (Hemmerdinger room)",
   },
   {
     activityTitle: "Cloud Services/Hosting ☁️ Workshop",
-    activityDescription: "4:30PM - HE 706 (Hemmerdinger room)",
+    activityDescription: "4:30 PM - HE 706 (Hemmerdinger room)",
   },
   {
     activityTitle: "In-Person Hacking Ends 📌",
-    activityDescription: "9PM – Hunter East Library",
+    activityDescription: "9:00 PM – Hunter East Library",
   },
 ];
 const activitiesSunday = [
   {
     activityTitle: "Breakfast 🍳",
-    activityDescription: "10AM – Hunter West Cafeteria",
+    activityDescription: "10:00 AM – Hunter West Cafeteria",
   },
   {
     activityTitle: "Hacking Ends + Lunch 🥪",
-    activityDescription: "12PM – Hunter West Cafeteria",
+    activityDescription: "12:00 PM – Hunter West Cafeteria",
   },
   {
     activityTitle: "Judging Begins 🏆",
-    activityDescription: "1PM – Hunter West Cafeteria",
+    activityDescription: "1:00 PM – Hunter West Cafeteria",
   },
   {
     activityTitle: "Judging Ends 🛑",
-    activityDescription: "3PM – Hunter West Cafeteria",
+    activityDescription: "3:00 PM – Hunter West Cafeteria",
   },
   {
     activityTitle: "Closing Ceremony 🎊",
-    activityDescription: "4PM - Hunter West 714",
+    activityDescription: "4:00 PM - Hunter West 714",
   },
 ];
 
