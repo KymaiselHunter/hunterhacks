@@ -46,7 +46,7 @@ const judgeProfiles = [
   {
     src: Isabella,
     name: "Isabel Abonitalla",
-    profession: "Prev. MLH Coach, Hunter Alum",
+    profession: "Prev MLH Coach, Prev Intern @ Microsoft & Roblox",
   },
   { src: Justin, name: "Justin Tojeira", profession: "Hunter CS Professor" },
   { 
