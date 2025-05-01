@@ -54,7 +54,7 @@ const activitiesSaturday = [
   },
   {
     activityTitle: "LUNCH",
-    activityDescription: "6:00 PM - Hunter West Cafeteria",
+    activityDescription: "1:00 PM - Hunter West Cafeteria",
   },
   {
     activityTitle: "Cup Stacking 🥤",
