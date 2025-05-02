@@ -12,7 +12,7 @@ const activitiesFriday = [
   },
   {
     activityTitle: "MLT Presentation 📎",
-    activityDescription: "3:00 PM – Hunter West Auditorium",
+    activityDescription: "3:00 PM – Hunter West Lobby",
   },
   {
     activityTitle: "HACKING STARTS 😈 + Product Thinking Workshop",
