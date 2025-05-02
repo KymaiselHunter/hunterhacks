@@ -15,12 +15,8 @@ const activitiesFriday = [
     activityDescription: "3:00 PM – Hunter West Auditorium",
   },
   {
-    activityTitle: "HACKING STARTS 😈",
+    activityTitle: "HACKING STARTS 😈 + Product Thinking Workshop",
     activityDescription: "3:30 PM - Hunter West Lobby",
-  },
-  {
-    activityTitle: "Product Thinking Workshop 🤔",
-    activityDescription: "4:00 PM - Hunter West Lobby",
   },
   {
     activityTitle: "Check-in Ends, Team Registration + Mentor Matching 🙋‍♀️",
@@ -31,8 +27,16 @@ const activitiesFriday = [
     activityDescription: "6:00 PM - Hunter West Lobby",
   },
   {
+    activityTitle: "Hackathon Best Practices for Beginners Workshop",
+    activityDescription: "6:30 PM - Hunter West Lobby",
+  },
+  {
+    activityTitle: "AI/LLM Workshop 💻",
+    activityDescription: "7:00 PM - VIRTUAL",
+  },
+  {
     activityTitle: "In-Person Hacking Ends 📌",
-    activityDescription: "9:00 PM – Hunter East Library",
+    activityDescription: "9:00 PM – Hunter West Lobby",
   },
 ];
 const activitiesSaturday = [
@@ -57,12 +61,20 @@ const activitiesSaturday = [
     activityDescription: "1:00 PM - Hunter West Cafeteria",
   },
   {
+    activityTitle: "How to Build and Deploy a Next.js Website ✅",
+    activityDescription: "1:30 PM - HE 706 (Hemmerdinger room)",
+  },
+  {
     activityTitle: "Cup Stacking 🥤",
     activityDescription: "3:00 PM - Hunter West Cafeteria",
   },
   {
+    activityTitle: "Simplify Workshop",
+    activityDescription: "3:30 PM - HE 706 (Hemmerdinger room)",
+  },
+  {
     activityTitle: "LinkedIn Workshop 🤝",
-    activityDescription: "4:00 PM – HE 706 (Hemmerdinger room)",
+    activityDescription: "4:00 PM – VIRTUAL",
   },
   {
     activityTitle: "Cloud Services/Hosting ☁️ Workshop",
@@ -70,7 +82,7 @@ const activitiesSaturday = [
   },
   {
     activityTitle: "In-Person Hacking Ends 📌",
-    activityDescription: "9:00 PM – Hunter East Library",
+    activityDescription: "9:00 PM – Hunter West Lobby",
   },
 ];
 const activitiesSunday = [
